@@ -2,22 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="/new1/Style/H/css/css.css" />
-<link type="text/css" rel="stylesheet" href="/new1/Style/JBox/Skins/Currently/jbox.css"/>
-<link href="/new1/Style/H/css/Mbmber.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/p2p/Style/H/css/css.css" />
+<link type="text/css" rel="stylesheet" href="/p2p/Style/JBox/Skins/Currently/jbox.css"/>
+<link href="/p2p/Style/H/css/Mbmber.css" rel="stylesheet" type="text/css">
 
-<link href="/new1/Style/H/css/css/default.css" rel="stylesheet" type="text/css" />
-<link href="/new1/Style/H/css/css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="/new1/Style/H/css/home.css" />
+<link href="/p2p/Style/H/css/css/default.css" rel="stylesheet" type="text/css" />
+<link href="/p2p/Style/H/css/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/p2p/Style/H/css/home.css" />
 
-<script language=javascript type="text/javascript" src="/new1/Style/Js/jquery.js"></script>
-<script language=javascript src="/new1/Style/JBox/jquery.jBox-2.3.min.js" type=text/javascript></script>
-<script language=javascript src="/new1/Style/JBox/jquery.jBoxConfig.js" type=text/javascript></script>
-<script  type="text/javascript" src="/new1/Style/Js/ui.core.js"></script>
-<script  type="text/javascript" src="/new1/Style/Js/ui.tabs.js"></script>
-<script type="text/javascript" src="/new1/Style/My97DatePicker/WdatePicker.js" language="javascript"></script>
-<script language="javaScript" type="text/javascript" src="/new1/Style/H/js/backtotop.js"></script>
-<script type="text/javascript" src="/new1/Style/Js/utils.js"></script>
+<script language=javascript type="text/javascript" src="/p2p/Style/Js/jquery.js"></script>
+<script language=javascript src="/p2p/Style/JBox/jquery.jBox-2.3.min.js" type=text/javascript></script>
+<script language=javascript src="/p2p/Style/JBox/jquery.jBoxConfig.js" type=text/javascript></script>
+<script  type="text/javascript" src="/p2p/Style/Js/ui.core.js"></script>
+<script  type="text/javascript" src="/p2p/Style/Js/ui.tabs.js"></script>
+<script type="text/javascript" src="/p2p/Style/My97DatePicker/WdatePicker.js" language="javascript"></script>
+<script language="javaScript" type="text/javascript" src="/p2p/Style/H/js/backtotop.js"></script>
+<script type="text/javascript" src="/p2p/Style/Js/utils.js"></script>
 <script type="text/javascript">
 	function makevar(v){
 		var d={};
@@ -32,7 +32,7 @@
 	function ajaxGetData(url,targetid,data){
 			if(!url) return;
 			data = data||{};
-			var thtml = '<div class="loding"><img src="/new1/Style/Js/006.gif"align="absmiddle" />　信息正在加载中...,如长时间未加载完成，请刷新页面</div>';
+			var thtml = '<div class="loding"><img src="/p2p/Style/Js/006.gif"align="absmiddle" />　信息正在加载中...,如长时间未加载完成，请刷新页面</div>';
 			$("#"+targetid).html(thtml);
 			$.ajax({
 				url: url,
@@ -121,9 +121,9 @@
 
 <title>我的账户-- <?php echo ($glo["web_name"]); ?></title>
 <!--<?php echo ($uclogin); ?>-->
-<link rel="stylesheet" type="text/css" href="/new1/Style/JQtip/tip-yellowsimple/tip-yellowsimple.css" />
-<script language=javascript type="text/javascript" src="/new1/Style/Js/jquery.js"></script>
-<script language="javascript" src="/new1/Style/JQtip/jquery.poshytip.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/p2p/Style/JQtip/tip-yellowsimple/tip-yellowsimple.css" />
+<script language=javascript type="text/javascript" src="/p2p/Style/Js/jquery.js"></script>
+<script language="javascript" src="/p2p/Style/JQtip/jquery.poshytip.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(function(){
 	$('.xtitle').poshytip({
@@ -166,10 +166,10 @@
 
 <div class="under">
 	<div class="under_1000">
-        <div class="logo_left"><a href="/new1/index.php/home/index.html"><?php echo get_ad(1);?></a></div>
+        <div class="logo_left"><a href="/p2p/index.php/home/index.html"><?php echo get_ad(1);?></a></div>
         <div class="content_nav">
 			<?php $typelist = getTypeList(array('type_id'=>0,'limit'=>9)); foreach($typelist as $vtype=> $va){ ?>
-            <a id="<?php echo ($va["type_nid"]); ?>" href="/new1<?php echo ($va["turl"]); ?>" class=""><?php echo ($va["type_name"]); ?></a>
+            <a id="<?php echo ($va["type_nid"]); ?>" href="/p2p<?php echo ($va["turl"]); ?>" class=""><?php echo ($va["type_name"]); ?></a>
             <?php } ?>
         </div>
         <div class="clear"></div>
@@ -201,47 +201,47 @@
 
 </div>
 <!--中部开始-->
-<div class="Cmm" style="margin-top:10px"> <div class="user_list" > <a class="dw_top" href="/new1/index.php/member" style="border-top:1px solid #D2D2D2;">帐户总览</a>
+<div class="Cmm" style="margin-top:10px"> <div class="user_list" > <a class="dw_top" href="/p2p/index.php/member" style="border-top:1px solid #D2D2D2;">帐户总览</a>
   <div id="dw_m_left">
     <div class="dv_r_5" > <a class="bt6"><span></span>基本设置</a> </div>
     <div class="dw_navlist">
       <ul>
-        <li><a href="/new1/index.php/member/memberinfo#fragment-1">基本资料</a></li>
-        <li><a href="/new1/index.php/member/user#fragment-1">头像密码</a></li>
-        <li><a href="/new1/index.php/member/verify?id=1#fragment-1">认证中心</a></li>
-        <?php if($loginconfig['qq']['enable'] == '0' and $loginconfig['sina']['enable'] == '0'): ?><li class="last"><a href="/new1/index.php/member/msg#fragment-1">系统消息</a></li>
+        <li><a href="/p2p/index.php/member/memberinfo#fragment-1">基本资料</a></li>
+        <li><a href="/p2p/index.php/member/user#fragment-1">头像密码</a></li>
+        <li><a href="/p2p/index.php/member/verify?id=1#fragment-1">认证中心</a></li>
+        <?php if($loginconfig['qq']['enable'] == '0' and $loginconfig['sina']['enable'] == '0'): ?><li class="last"><a href="/p2p/index.php/member/msg#fragment-1">系统消息</a></li>
           <?php else: ?>
-          <li><a href="/new1/index.php/member/msg#fragment-1">系统消息</a></li>
-          <!--<li class="last"><a  href="/new1/index.php/member/oauthlogin">快捷登录</a></li>--><?php endif; ?>
+          <li><a href="/p2p/index.php/member/msg#fragment-1">系统消息</a></li>
+          <!--<li class="last"><a  href="/p2p/index.php/member/oauthlogin">快捷登录</a></li>--><?php endif; ?>
       </ul>
     </div>
     <div class="dv_r_5" > <a class="bt3"><span></span>资金管理</a> </div>
     <div class="dw_navlist">
       <ul>
-        <li><a href="/new1/index.php/member/capital#fragment-1">资金统计</a></li>     
-        <li><a href="/new1/index.php/member/charge#fragment-1">我要充值</a></li>
-        <li><a href="/new1/index.php/member/withdraw#fragment-1">我要提现</a></li>
-        <li><a href="/new1/index.php/member/bank#fragment-1">银行帐户</a></li>
-        <!--<li class="last"><a href="/new1/index.php/member/credit#fragment-1">积分记录</a></li>-->
+        <li><a href="/p2p/index.php/member/capital#fragment-1">资金统计</a></li>     
+        <li><a href="/p2p/index.php/member/charge#fragment-1">我要充值</a></li>
+        <li><a href="/p2p/index.php/member/withdraw#fragment-1">我要提现</a></li>
+        <li><a href="/p2p/index.php/member/bank#fragment-1">银行帐户</a></li>
+        <!--<li class="last"><a href="/p2p/index.php/member/credit#fragment-1">积分记录</a></li>-->
       </ul>
     </div>
     <div class="dv_r_5"> <a class="bt4"><span></span>投资管理</a> </div>
     <div class="dw_navlist">
       <ul>
-        <li><a href="/new1/index.php/member/tendout#fragment-3">散标投资</a></li>
-		 <!--<li><a href="/new1/index.php/member/fund#fragment-2">省心宝投资</a></li>
-        <li><a href="/new1/index.php/member/debt#fragment-1">债权转让</a></li>-->
-        <li  class="last"><a href="/new1/index.php/member/auto/index.html">自动投标</a></li>
+        <li><a href="/p2p/index.php/member/tendout#fragment-3">散标投资</a></li>
+		 <!--<li><a href="/p2p/index.php/member/fund#fragment-2">省心宝投资</a></li>
+        <li><a href="/p2p/index.php/member/debt#fragment-1">债权转让</a></li>-->
+        <li  class="last"><a href="/p2p/index.php/member/auto/index.html">自动投标</a></li>
       </ul>
     </div>
 	<?php $find=M('members')->where(array('is_vip'=>1,'id'=>$uid))->find();;if($find){ ?>
     <div class="dv_r_5" > <a class="bt2"><span></span>借款管理</a> </div>
     <div class="dw_navlist">
       <ul>
-        <li><a href="/new1/index.php/member/borrowin#fragment-3">借款总表</a></li>
-		<li><a href="/new1/index.php/home/borrow/index.html">我要借款</a></li>
-        <!--<li ><a href="/new1/index.php/member/moneylimit#fragment-1">额度申请</a></li>
-        <li class="last"><a href="/new1/index.php/member/verify#fragment-7">资料上传</a></li>-->
+        <li><a href="/p2p/index.php/member/borrowin#fragment-3">借款总表</a></li>
+		<li><a href="/p2p/index.php/home/borrow/index.html">我要借款</a></li>
+        <!--<li ><a href="/p2p/index.php/member/moneylimit#fragment-1">额度申请</a></li>
+        <li class="last"><a href="/p2p/index.php/member/verify#fragment-7">资料上传</a></li>-->
       </ul>
     </div>
 	<?php } ?>
@@ -262,7 +262,7 @@
       </ul>
     </div>
   </div>
-  <!--<a href="/new1/index.php/member/auto/index.html" class="dw_autotou"></a>--> </div>
+  <!--<a href="/p2p/index.php/member/auto/index.html" class="dw_autotou"></a>--> </div>
 <script type="text/javascript">
 dw_solid =function (a,b,c){
 var a1=$(a).children(),
@@ -304,25 +304,25 @@ $('body,html').animate({scrollTop:0},1);
     <div class="dw_list">
       <div class="dw_top">
         <div class="heng1"> <span>您好!<?php echo session('u_user_name');?> </span> <span style="font-size:12px;color:#047ACD">
-          <?php if($minfo["user_leve"] == 0): ?>您还未申请VIP(<a href="/new1/index.php/member/vip">申请VIP</a>)
+          <?php if($minfo["user_leve"] == 0): ?>您还未申请VIP(<a href="/p2p/index.php/member/vip">申请VIP</a>)
             <?php elseif($minfo["time_limit"] > time()): ?>
             <?php else: ?>
-            您的VIP已于<?php echo (date("Y-m-d",$minfo["time_limit"])); ?>到期(<a href="/new1/index.php/member/vip">重新申请</a>)<?php endif; ?>
+            您的VIP已于<?php echo (date("Y-m-d",$minfo["time_limit"])); ?>到期(<a href="/p2p/index.php/member/vip">重新申请</a>)<?php endif; ?>
           </span> </div>
         <div class="heng2"> <span>帐户余额:<span class="color1"><?php echo Fmoney($minfo['account_money']+$minfo['back_money']);?></span></span> </div>
       </div>
       <div class="dw_dierheng">
         <div class="heng1" style="overflow:visible">
-          <div class="touxiang"> <a href="/new1/index.php/member/user#fragment-1" title="点击进行头像更换"> <img style="width: 114px; height: 114px;"  alt="点击进行头像更换" src="<?php echo (get_avatar($UID)); ?>"  /></a> </div>
+          <div class="touxiang"> <a href="/p2p/index.php/member/user#fragment-1" title="点击进行头像更换"> <img style="width: 114px; height: 114px;"  alt="点击进行头像更换" src="<?php echo (get_avatar($UID)); ?>"  /></a> </div>
           <div class="touxiang_right" >
             <!--<div class="dw_p1">
               <div class="dw_50">投资等级:<span class="xtitle" title="投资积分：<?php echo ((isset($minfo["integral"]) && ($minfo["integral"] !== ""))?($minfo["integral"]):0); ?>分">&nbsp;<?php echo (getInvestLeveIco($minfo["integral"],2)); ?></span></div>
               <div class="dw_50">信用等级：<span class="xtitle" title="积分：<?php echo ((isset($minfo["credits"]) && ($minfo["credits"] !== ""))?($minfo["credits"]):0); ?>分">&nbsp;<?php echo (getLeveIco($minfo["credits"],3)); ?></span></div>
             </div>-->
-            <div class="dw_p2"> <a href="/new1/index.php/member/charge#fragment-1" class="dw_cz" title="充值" > 充值 </a> <a href="/new1/index.php/member/withdraw#fragment-1"  class="dw_tixian"  title="提现"> 提现</a> </div>
+            <div class="dw_p2"> <a href="/p2p/index.php/member/charge#fragment-1" class="dw_cz" title="充值" > 充值 </a> <a href="/p2p/index.php/member/withdraw#fragment-1"  class="dw_tixian"  title="提现"> 提现</a> </div>
             <div class="dw_p3">
               <?php if($has_pin == 'no'): ?><div class="dw_tip">
-                  <div class="dw_tip2">还未设支付密码<span ></span> <a  style="color:#0099DD" href="/new1/index.php/member/user#fragment-3">[点此设置]</a><span ></span></div>
+                  <div class="dw_tip2">还未设支付密码<span ></span> <a  style="color:#0099DD" href="/p2p/index.php/member/user#fragment-3">[点此设置]</a><span ></span></div>
                   <div class="dw_tip3"> </div>
                   <div class="dw_tip5" id="dwtipkff"> </div>
                 </div>
@@ -463,7 +463,7 @@ function jfun_dogetpaypass(){
 	}
 	$.jBox.tip("邮件发送中......","loading");
 	$.ajax({
-		url: "/new1/index.php/Member/Index/dogetpaypass",
+		url: "/p2p/index.php/Member/Index/dogetpaypass",
 		data: {"u":ux},
 		//timeout: 5000,
 		cache: false,
@@ -484,7 +484,7 @@ function jfun_dogetpaypass(){
 }
 
 function getpaypassword() {
-	$.jBox("get:/new1/index.php/Member/Index/getpaypassword", {
+	$.jBox("get:/p2p/index.php/Member/Index/getpaypassword", {
 		title: "找回支付密码",
 		width: "auto",
 		buttons: {'发送邮件':'jfun_dogetpaypass()','关闭': true }
@@ -494,19 +494,19 @@ function getpaypassword() {
 </div>
 ﻿<div class="bot" align="center">
 	<div class="bot_1000">
-    <a href="/new1/index.php/home/help/index?aboutus/jianjie.html">关于我们</a>    |    <a href="/new1/index.php/Home/borrow/index.html">我要借款</a>    |    <a href="/new1/index.php/home/invest/index.html">P2P投资项目</a>    |    <a href="/new1/index.php/home/help?news/index.html">新闻中心</a>    |    <a href="/new1/index.php/home/bangzhu/new.html">新手指引</a>    |    <a href="/new1/sitemap.html" target="_blank">网站地图</a>
+    <a href="/p2p/index.php/home/help/index?aboutus/jianjie.html">关于我们</a>    |    <a href="/p2p/index.php/Home/borrow/index.html">我要借款</a>    |    <a href="/p2p/index.php/home/invest/index.html">P2P投资项目</a>    |    <a href="/p2p/index.php/home/help?news/index.html">新闻中心</a>    |    <a href="/p2p/index.php/home/bangzhu/new.html">新手指引</a>    |    <a href="/p2p/sitemap.html" target="_blank">网站地图</a>
     </div>    
 </div>
 <div class="bottom">
 	<div class="bottom_1000">
     	<div class="bottom_a1">
         	<div class="kfleft">
-                <span class="b_img"><img src="/new1/Style/H/images/images/d_zxkf.png" /></span>
+                <span class="b_img"><img src="/p2p/Style/H/images/images/d_zxkf.png" /></span>
                 <span class="b_kefu">在线客服</span>
                 <span class="b_licai"><?php $_result=get_qq(0);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vq): $mod = ($i % 2 );++$i; echo (cnsubstr($vq["qq_title"],6,0,"utf-8",false)); ?>：<?php echo ($vq["qq_num"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php endforeach; endif; else: echo "" ;endif; ?></span>
         	</div>
             <div class="rightk">
-                <span class="r_img"><img src="/new1/Style/H/images/images/d_qqqun.png" /></span>
+                <span class="r_img"><img src="/p2p/Style/H/images/images/d_qqqun.png" /></span>
                 <span class="r_txt"><?php $_result=get_qq(1);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vq): $mod = ($i % 2 );++$i;?>QQ交流群 : <?php echo ($vq["qq_num"]); endforeach; endif; else: echo "" ;endif; ?></span>
             </div>
             <div class="clear"></div>
@@ -514,7 +514,7 @@ function getpaypassword() {
 				<li>客户服务：</li>
 				<li><a class="weibo" href="http://weibo.com/ronghaihang" target="_blank">融海行新浪微博</a></li>
 				<li><a class="qqweibo" href="#" onclick="return false;" onmousemove="document.getElementById('myWXpic').style.display='block';" onmouseout="document.getElementById('myWXpic').style.display='none'">融海行微信</a></li>
-                <li id="myWXpic" style="display: none; position: absolute; width: 138px; height: 138px; left: 41%;"><img style="height:138px;width:138px;float:none;margin:0px;" alt="" src="/new1/UF/Uploads/Article/20150522101245.jpg"></li>
+                <li id="myWXpic" style="display: none; position: absolute; width: 138px; height: 138px; left: 41%;"><img style="height:138px;width:138px;float:none;margin:0px;" alt="" src="/p2p/UF/Uploads/Article/20150522101245.jpg"></li>
 				<div class="clear"></div>
 			 </ul>
         </div>
@@ -532,7 +532,7 @@ function getpaypassword() {
     <div class="cn">
       <h3 class="titZx">融海行在线客服</h3>
       <ul>
-		<?php $_result=get_qq(0);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vq): $mod = ($i % 2 );++$i;?><li><span>客服</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo ($vq["qq_num"]); ?>&site=qq&menu=yes"><img border="0" src="/new1/Style/H/images/images/online.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li><?php endforeach; endif; else: echo "" ;endif; ?>
+		<?php $_result=get_qq(0);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vq): $mod = ($i % 2 );++$i;?><li><span>客服</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo ($vq["qq_num"]); ?>&site=qq&menu=yes"><img border="0" src="/p2p/Style/H/images/images/online.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li><?php endforeach; endif; else: echo "" ;endif; ?>
 		<li><?php echo get_ad(11);?></li>
 		<?php $_result=get_qq(2);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vq): $mod = ($i % 2 );++$i;?><li style="border:none;"><span>电话：<?php echo ($vq["qq_num"]); ?></span> </li><?php endforeach; endif; else: echo "" ;endif; ?>
       </ul>

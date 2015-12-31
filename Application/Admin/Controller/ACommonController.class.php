@@ -216,12 +216,11 @@ class ACommonController extends Controller
         if (false === $model->create()) {
             $this->error($model->getError());
         }
-		
+//         debug($model);
 		if (method_exists($this, '_doEditFilter')) {
-        
             $model = $this->_doEditFilter($model);
         }
-		
+        die;
         //保存当前数据对象
         if ($result = $model->save()) { //保存成功
 			if (method_exists($this, '_AfterDoEdit')) {

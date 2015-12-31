@@ -4,17 +4,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title><?php echo ($ts['site']['site_name']); ?>管理后台</title>
-<link href="/new1/Style/A/css/style.css" rel="stylesheet" type="text/css">
-<link href="/new1/Style/A/js/tbox/box.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/new1/Style/A/js/jquery.js"></script>
-<script type="text/javascript" src="/new1/Style/A/js/common.js"></script>
-<script type="text/javascript" src="/new1/Style/A/js/tbox/box.js"></script>
+<link href="/p2p/Style/A/css/style.css" rel="stylesheet" type="text/css">
+<link href="/p2p/Style/A/js/tbox/box.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/p2p/Style/A/js/jquery.js"></script>
+<script type="text/javascript" src="/p2p/Style/A/js/common.js"></script>
+<script type="text/javascript" src="/p2p/Style/A/js/tbox/box.js"></script>
 </head>
 <body>
 
 <script type="text/javascript">
-	var delUrl = '/new1/index.php/Admin/Ad/doDel';
-	var addUrl = '/new1/index.php/Admin/Ad/add';
+	var delUrl = '/p2p/index.php/Admin/Ad/doDel';
+	var addUrl = '/p2p/index.php/Admin/Ad/add';
 	var addTitle = '添加分类';
 </script>
 <div class="so_main">
@@ -44,7 +44,7 @@
         <td><?php echo ($vo["title"]); ?></td>
         <td><?php echo (date('Y-m-d',$vo["add_time"])); ?></td>
         <td>
-            <a href="/new1/index.php/Admin/Ad/edit?id=<?php echo ($vo['id']); ?>">编辑</a> 
+            <a href="/p2p/index.php/Admin/Ad/edit?id=<?php echo ($vo['id']); ?>">编辑</a> 
             <a href="javascript:void(0);" onclick="del(<?php echo ($vo['id']); ?>);">删除</a>  
         </td>
       </tr><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -60,6 +60,6 @@
 </div>
 
 
-<script type="text/javascript" src="/new1/Style/A/js/adminbase.js"></script>
+<script type="text/javascript" src="/p2p/Style/A/js/adminbase.js"></script>
 </body>
 </html>

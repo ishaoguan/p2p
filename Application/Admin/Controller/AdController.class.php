@@ -29,7 +29,7 @@ class AdController extends ACommonController
 	public function _doAddFilter($m)
 	{
 		if ( $_POST['remove_p'] == 0 )
-		{
+		{   $m->content = htmlspecialchars_decode($m->content);
 			$m->content = preg_replace( "/<p[^>]*>/i", "", $m->content );
 			$m->content = preg_replace( "/<\\/p[^<]*>/i", "", $m->content );
 		}
@@ -42,11 +42,11 @@ class AdController extends ACommonController
 
 	public function _doEditFilter($m)
 	{
-// 	    debug($m->content);
 		if ( $m->ad_type == 0 )
 		{
 			if ( $_POST['remove_p'] == 0 )
-			{
+			{   $m->content = htmlspecialchars_decode($m->content);
+			     
 				$m->content = preg_replace( "/<p[^>]*>/i", "", $m->content );
 				$m->content = preg_replace( "/<\\/p[^<]*>/i", "", $m->content );
 			}

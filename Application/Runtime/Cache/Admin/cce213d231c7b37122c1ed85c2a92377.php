@@ -12,7 +12,7 @@ table { margin:0 auto }
 img { border:none }
 ol, ul { list-style:none }
 caption, th { text-align:left }
-.Prompt_top, .Prompt_btm, .Prompt_ok, .Prompt_x { background:url(/new1/Style/tip/images/message.gif) no-repeat; display:inline-block }
+.Prompt_top, .Prompt_btm, .Prompt_ok, .Prompt_x { background:url(/p2p/Style/tip/images/message.gif) no-repeat; display:inline-block }
 .Prompt { width:640px; margin:100px auto 180px; text-align:left; }
 .Prompt_top { background-position:0 0; height:15px; width:100%; }
 .Prompt_con { width:100%; border-left:1px solid #E7E7E7; border-right:1px solid #E7E7E7; background:#fff; overflow:hidden;}
@@ -59,7 +59,7 @@ document.onload = setTimeout("Jump()" , <?php echo ($waitSecond); ?>* 1000);
       <h2 style="color:red"><?php echo ($error); ?></h2>
         <?php if(isset($closeWin)): ?><p>系统将在 <span style="color:blue;font-weight:bold"><?php echo ($waitSecond); ?></span> 秒后自动关闭，如果不想等待,直接点击 <A HREF="<?php echo ($jumpUrl); ?>">这里</A> 关闭</p><?php endif; ?>
       <?php if(!isset($closeWin)): ?><p>系统将在 <span style="color:blue;font-weight:bold"><?php echo ($waitSecond); ?></span> 秒后自动跳转,如果不想等待,直接点击 <A HREF="<?php echo ($jumpUrl); ?>">这里</A> 跳转<br/>
-          或者 <a href="/new1/">返回首页</a></p><?php endif; ?>
+          或者 <a href="/p2p/">返回首页</a></p><?php endif; ?>
       </dd>
     </dl>
     <div class="c"></div>

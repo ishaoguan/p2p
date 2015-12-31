@@ -2,19 +2,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title><?php echo ($ts['site']['site_name']); ?>后台管理</title>
-<script type="text/javascript" src="/new1/Style/A/js/jquery.js"></script>
+<script type="text/javascript" src="/p2p/Style/A/js/jquery.js"></script>
 
 <link rel="stylesheet" type="text/css" href="/Style/A/js/tbox/box.css"/>
-<script type="text/javascript" src="/new1/Style/A/js/common.js"></script>
-<script type="text/javascript" src="/new1/Style/A/js/tbox/box.js"></script>
-<link rel="stylesheet" href="/new1/Style/A/css/style.css">
+<script type="text/javascript" src="/p2p/Style/A/js/common.js"></script>
+<script type="text/javascript" src="/p2p/Style/A/js/tbox/box.js"></script>
+<link rel="stylesheet" href="/p2p/Style/A/css/style.css">
 <script language="javascript" type="text/javascript"> 
 <!-- 
 var arrCSS=[ 
-    ["<img src='/new1/Style/A/images/huanfu/tangerine.gif' width='16' height='9' class='themes' alt='Ocean'>","/new1/Style/A/css/style.css"], 
-    ["<img src='/new1/Style/A/images/huanfu/ocean.gif' width='16' height='9' class='themes' alt='Tangerine'>","/new1/Style/A/css/style_1.css"], 
-    ["<img src='/new1/Style/A/images/huanfu/violet.gif' width='16' height='9' class='themes' alt='Violet'>","/new1/Style/A/css/style_2.css"], 
-    ["<img src='/new1/Style/A/images/huanfu/hui.gif' width='16' height='9' class='themes' alt='Oyster'>","/new1/Style/A/css/style_3.css"], 
+    ["<img src='/p2p/Style/A/images/huanfu/tangerine.gif' width='16' height='9' class='themes' alt='Ocean'>","/p2p/Style/A/css/style.css"], 
+    ["<img src='/p2p/Style/A/images/huanfu/ocean.gif' width='16' height='9' class='themes' alt='Tangerine'>","/p2p/Style/A/css/style_1.css"], 
+    ["<img src='/p2p/Style/A/images/huanfu/violet.gif' width='16' height='9' class='themes' alt='Violet'>","/p2p/Style/A/css/style_2.css"], 
+    ["<img src='/p2p/Style/A/images/huanfu/hui.gif' width='16' height='9' class='themes' alt='Oyster'>","/p2p/Style/A/css/style_3.css"], 
     "" 
     ]; 
 
@@ -135,11 +135,11 @@ function txxt(){
 		    <div class="nav_sub">
 			 <span style="color:#ffffff;"><?php echo session('admin_user_name');?></span>
 			  您好！&nbsp; |
-               <a href="/new1/index.php/" target="_blank">查看前台</a> | 
+               <a href="/p2p/index.php/" target="_blank">查看前台</a> | 
 			  <a href="javascript:void(0);" onClick="txxt();">通讯系统</a> |
 			  <a href="javascript:void(0);" onClick="refresh();">刷新</a> |
 			  <a href="javascript:void(0);" onClick="switch_sub_menu('16', '/admin/global/cleanall.html');">清空缓存</a> |
-              <a href="/new1/index.php/Admin/Index/logout">退出</a><br/>
+              <a href="/p2p/index.php/Admin/Index/logout">退出</a><br/>
 		      <div id="TopTime"></div>
 		    </div>
 
@@ -160,7 +160,7 @@ function txxt(){
   <!--
    <div class="kuaiJie">
     <a href="javascript:void(0);" class="suaxin"onclick="refresh();" style="color:#FFFFFF; font-weight:normal;">刷&nbsp;&nbsp;新</a> 
-    <a  id="menu_16" class="submenuA"  style="display:block; float:left; background:url(/new1/Style/A/images/new/28.png); text-align:center;  width:75px; height:25px; color:#fff; font-weight:normal;"  hidefocus="true" onClick="switch_sub_menu('16', '/admin/global/cleanall.html');" href="javascript:void(0)">
+    <a  id="menu_16" class="submenuA"  style="display:block; float:left; background:url(/p2p/Style/A/images/new/28.png); text-align:center;  width:75px; height:25px; color:#fff; font-weight:normal;"  hidefocus="true" onClick="switch_sub_menu('16', '/admin/global/cleanall.html');" href="javascript:void(0)">
       清空缓存
     </a>
   </div>
@@ -170,7 +170,7 @@ function txxt(){
 	</td>
   </tr>
   <tr>
-  	<td width="200px" height="100%" valign="top" id="FrameTitle" background="/new1/Style/A/images/left_bg.gif">
+  	<td width="200px" height="100%" valign="top" id="FrameTitle" background="/p2p/Style/A/images/left_bg.gif">
   		<div class="LeftMenu">
 		<?php $iterator = 1; $home_url = ''; $j = 1 ; ?>
   		<!-- 第一级菜单，即大频道 -->
@@ -247,10 +247,10 @@ function txxt(){
 		root = $('#tree_'+root);
 		if (root.css('display') == 'block') {
 			root.css('display', 'none');
-			root.parent().css('backgroundImage', 'url(/new1/Style/A/images/ArrOn1.png)');
+			root.parent().css('backgroundImage', 'url(/p2p/Style/A/images/ArrOn1.png)');
 		}else {
 			root.css('display', 'block');
-			root.parent().css('backgroundImage', 'url(/new1/Style/A/images/ArrOff2.png)');
+			root.parent().css('backgroundImage', 'url(/p2p/Style/A/images/ArrOff2.png)');
 		}
 	}
 	

@@ -4,11 +4,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title><?php echo ($ts['site']['site_name']); ?>管理后台</title>
-<link href="/new1/Style/A/css/style.css" rel="stylesheet" type="text/css">
-<link href="/new1/Style/A/js/tbox/box.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/new1/Style/A/js/jquery.js"></script>
-<script type="text/javascript" src="/new1/Style/A/js/common.js"></script>
-<script type="text/javascript" src="/new1/Style/A/js/tbox/box.js"></script>
+<link href="/p2p/Style/A/css/style.css" rel="stylesheet" type="text/css">
+<link href="/p2p/Style/A/js/tbox/box.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/p2p/Style/A/js/jquery.js"></script>
+<script type="text/javascript" src="/p2p/Style/A/js/common.js"></script>
+<script type="text/javascript" src="/p2p/Style/A/js/tbox/box.js"></script>
 </head>
 <body>
 <style type="text/css">
@@ -38,8 +38,8 @@
     font-weight:bold;
 }
 </style>
-<script type="text/javascript" src="/new1/Style/Js/highcharts.js"></script>
-<script type="text/javascript" src="/new1/Style/Js/exporting.js"></script>
+<script type="text/javascript" src="/p2p/Style/Js/highcharts.js"></script>
+<script type="text/javascript" src="/p2p/Style/Js/exporting.js"></script>
 <div class="so_main">
   <div class="page_tit">欢迎页</div>
   <!--列表模块-->
@@ -105,30 +105,30 @@ window.setInterval(changeClock, 1000);
     <h6>待审核工作</h6>
     <div class="content">
      <div style="float: left; width:300px;">
-        等待初审的标[<?php if($row["borrow_1"] > 0): ?><a href="/new1/index.php/admin/borrow/waitverify.html" ><?php echo ($row["borrow_1"]); ?></a><?php else: ?> 0<?php endif; ?>]个
+        等待初审的标[<?php if($row["borrow_1"] > 0): ?><a href="/p2p/index.php/admin/borrow/waitverify.html" ><?php echo ($row["borrow_1"]); ?></a><?php else: ?> 0<?php endif; ?>]个
      </div>
     <div style="float: left; width:300px;">
-        等待复审的标[<?php if($row["borrow_2"] > 0): ?><a href="/new1/index.php/admin/borrow/waitverify2.html"><?php echo ($row["borrow_2"]); ?></a><?php else: ?> 0<?php endif; ?>]个
+        等待复审的标[<?php if($row["borrow_2"] > 0): ?><a href="/p2p/index.php/admin/borrow/waitverify2.html"><?php echo ($row["borrow_2"]); ?></a><?php else: ?> 0<?php endif; ?>]个
      </div>
      <br />
 	 <div style="float: left; width:300px;">  
-        等待VIP认证的[<?php if($row["vip_a"] > 0): ?><a href="/new1/index.php/admin/vipapply/index?status=0"><?php echo ($row["vip_a"]); ?></a><?php else: ?> 0<?php endif; ?>]个
+        等待VIP认证的[<?php if($row["vip_a"] > 0): ?><a href="/p2p/index.php/admin/vipapply/index?status=0"><?php echo ($row["vip_a"]); ?></a><?php else: ?> 0<?php endif; ?>]个
      </div>
 	 <br/>
 	 <div style="float: left; width:300px;">   
-         等待实名认证的[<?php if($row["real_a"] > 0): ?><a href="/new1/index.php/admin/memberid/index?status=3"><?php echo ($row["real_a"]); ?></a><?php else: ?> 0<?php endif; ?>]个
+         等待实名认证的[<?php if($row["real_a"] > 0): ?><a href="/p2p/index.php/admin/memberid/index?status=3"><?php echo ($row["real_a"]); ?></a><?php else: ?> 0<?php endif; ?>]个
      </div>
      <!--<div style="float: left; width:300px;">
-        额度申请等待审核的[<?php if($row["limit_a"] > 0): ?><a href="/new1/index.php/admin/members/infowait.html"><?php echo ($row["limit_a"]); ?></a><?php else: ?> 0<?php endif; ?>]个 
+        额度申请等待审核的[<?php if($row["limit_a"] > 0): ?><a href="/p2p/index.php/admin/members/infowait.html"><?php echo ($row["limit_a"]); ?></a><?php else: ?> 0<?php endif; ?>]个 
      </div>-->
 	 <br />
      <div style="float: left; width:300px;"> 
-        上传资料等待审核的[<?php if($row["data_up"] > 0): ?><a href="/new1/index.php/admin/memberdata/index.html"><?php echo ($row["data_up"]); ?></a><?php else: ?> 0<?php endif; ?>]个
+        上传资料等待审核的[<?php if($row["data_up"] > 0): ?><a href="/p2p/index.php/admin/memberdata/index.html"><?php echo ($row["data_up"]); ?></a><?php else: ?> 0<?php endif; ?>]个
      </div>
      <br />
     
      <div style="float: left; width:300px;">   
-        等待审核提现[<?php if($row["withdraw"] > 0): ?><a href="/new1/index.php/admin/Withdrawlogwait/index.html"><?php echo ($row["withdraw"]); ?></a><?php else: ?> 0<?php endif; ?>]个
+        等待审核提现[<?php if($row["withdraw"] > 0): ?><a href="/p2p/index.php/admin/Withdrawlogwait/index.html"><?php echo ($row["withdraw"]); ?></a><?php else: ?> 0<?php endif; ?>]个
      </div>
 	  <br />
 	  <br />
@@ -141,6 +141,6 @@ window.setInterval(changeClock, 1000);
     </div>
 </div>
 </div>
-<script type="text/javascript" src="/new1/Style/A/js/adminbase.js"></script>
+<script type="text/javascript" src="/p2p/Style/A/js/adminbase.js"></script>
 </body>
 </html>

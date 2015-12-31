@@ -8,20 +8,20 @@
 <meta name="description" content="<?php echo ($glo["web_descript"]); ?>" />
 <meta property="wb:webmaster" content="37afd1196b6d28b7" />
 
-<link href="/new1/Style/H/css/css/default.css" rel="stylesheet" type="text/css" />
-<link href="/new1/Style/H/css/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/p2p/Style/H/css/css/default.css" rel="stylesheet" type="text/css" />
+<link href="/p2p/Style/H/css/css/style.css" rel="stylesheet" type="text/css" />
 
 <!--透明度修复-->
-<script src="/new1/Style/H/js/js/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+<script src="/p2p/Style/H/js/js/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
 <script type="text/javascript">
         DD_belatedPNG.fix('div, ul, img, li, input , a');
 </script>
 <!--透明度修复-->
 <!--------banner开始--------->
-<script type="text/javascript" src="/new1/Style/H/js/jquery.min.js"></script>
-<script type="text/javascript" src="/new1/Style/H/js/js/lrtk.js"></script>
-<script  src="/new1/Style/JBox/jquery.jBox.min.js" type="text/javascript"></script>
-<script  src="/new1/Style/JBox/jquery.jBoxConfig.js" type="text/javascript"></script>
+<script type="text/javascript" src="/p2p/Style/H/js/jquery.min.js"></script>
+<script type="text/javascript" src="/p2p/Style/H/js/js/lrtk.js"></script>
+<script  src="/p2p/Style/JBox/jquery.jBox.min.js" type="text/javascript"></script>
+<script  src="/p2p/Style/JBox/jquery.jBoxConfig.js" type="text/javascript"></script>
 <!--------banner结束------->
 
 </head>
@@ -54,10 +54,10 @@
 
 <div class="under">
 	<div class="under_1000">
-        <div class="logo_left"><a href="/new1/index.php/home/index.html"><?php echo get_ad(1);?></a></div>
+        <div class="logo_left"><a href="/p2p/index.php/home/index.html"><?php echo get_ad(1);?></a></div>
         <div class="content_nav">
 			<?php $typelist = getTypeList(array('type_id'=>0,'limit'=>9)); foreach($typelist as $vtype=> $va){ ?>
-            <a id="<?php echo ($va["type_nid"]); ?>" href="/new1<?php echo ($va["turl"]); ?>" class=""><?php echo ($va["type_name"]); ?></a>
+            <a id="<?php echo ($va["type_nid"]); ?>" href="/p2p<?php echo ($va["turl"]); ?>" class=""><?php echo ($va["type_name"]); ?></a>
             <?php } ?>
         </div>
         <div class="clear"></div>
@@ -91,14 +91,14 @@
 <div class="index_banner">
 <div class="flexslider">
    <ul class="slides">
-		<?php $_result=get_ad(4);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$va): $mod = ($i % 2 );++$i;?><li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2; background:url(/new1/<?php echo ($va["img"]); ?>) no-repeat top center;" class="flex-active-slide" title="<?php echo ($va["info"]); ?>"><a href="" target="_blank">&nbsp;</a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+		<?php $_result=get_ad(4);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$va): $mod = ($i % 2 );++$i;?><li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2; background:url(/p2p/<?php echo ($va["img"]); ?>) no-repeat top center;" class="flex-active-slide" title="<?php echo ($va["info"]); ?>"><a href="" target="_blank">&nbsp;</a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 	</ul>
   <div class="flex-position-nav"></div>
    
 </div>
 </div>
-<script type="text/javascript" src="/new1/Style/H/js/js/jquery-1.4.7.min.js"></script>
-  <script src="/new1/Style/H/js/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="/p2p/Style/H/js/js/jquery-1.4.7.min.js"></script>
+  <script src="/p2p/Style/H/js/js/jquery.flexslider-min.js"></script>
  <script>
 $(function(){
 	$('.flexslider').flexslider({
@@ -115,18 +115,18 @@ $(function(){
 				<div class="list-four">
 					<div style="width: 776px;float: left;">
 						<ul>
-							<a href="/new1/index.php/home/help/index?aboutus/jianjie.html"><li class="list3"><h1>专业</h1><p style="text-align:center; padding-top: 5px;">资深团队，银行级风控标准</p></li></a>
+							<a href="/p2p/index.php/home/help/index?aboutus/jianjie.html"><li class="list3"><h1>专业</h1><p style="text-align:center; padding-top: 5px;">资深团队，银行级风控标准</p></li></a>
 
-							<a href="/new1/index.php/home/bangzhu/safe.html"><li class="list1"><h1>安全</h1><p style="text-align:center; padding-top: 5px;">线下实体，100%本息保障</p></li></a>
+							<a href="/p2p/index.php/home/bangzhu/safe.html"><li class="list1"><h1>安全</h1><p style="text-align:center; padding-top: 5px;">线下实体，100%本息保障</p></li></a>
 						
-							<a href="/new1/index.php/home/help?news/index.html"><li class="list2"><h1>透明</h1><p style="text-align:center; padding-top: 5px;">新手指引，全方位了解平台</p></li></a>
+							<a href="/p2p/index.php/home/help?news/index.html"><li class="list2"><h1>透明</h1><p style="text-align:center; padding-top: 5px;">新手指引，全方位了解平台</p></li></a>
 						
 								
 							
 						</ul>
 					</div>
 					<div class="d_shuju" style="float: right;">
-						<div class="d_sj_title"><img src="/new1/Style/H/images/images/d_shuju.png" width="138" height="24" /></div>
+						<div class="d_sj_title"><img src="/p2p/Style/H/images/images/d_shuju.png" width="138" height="24" /></div>
 						<h1 style=" padding-top: 12px;">用户投资总额</h1>
 						<p class="d_number" style="padding: 10px 0 0 0;"><?php echo number_format($mborrowOut,2); ?>元</p>
 						<h1 style=" padding-top: 12px;">用户赚取收益</h1>
@@ -188,7 +188,7 @@ $(function(){
       <!-- Loan List -->
       <div class="loan mb fn-clear">
         <div class="grid_12">
-          <div class="tit t4"><a class="mo" href="/new1/index.php/Home/Invest/index.html" title="更多散标投资">更多&gt;&gt;</a><h2>散标投资<span>省时省心，安全灵活的理财计划！</span></h2></div>
+          <div class="tit t4"><a class="mo" href="/p2p/index.php/Home/Invest/index.html" title="更多散标投资">更多&gt;&gt;</a><h2>散标投资<span>省时省心，安全灵活的理财计划！</span></h2></div>
           <ul class="ui-list ui-list-m ui-list-invest" id="loan-list">
 
 <li class="ui-list-header fn-clear" id="loan-list-header">
@@ -203,7 +203,7 @@ $(function(){
 <?php if(is_array($listBorrow["list"])): $i = 0; $__LIST__ = $listBorrow["list"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vb): $mod = ($i % 2 );++$i;?><li class="ui-list-item fn-clear ">
   <span class="ui-list-field fn-left text-big w260">
     <!--<em class="ui-loantype XYRZ" title="信用认证标"></em>-->
-	<?php if($vb['ifdianzibiao']==1){echo '<em class="ui-loantype"><img src="/new1/Style/H/images/images/index_dian.png" /></em>';}else{echo '<em class="ui-loantype"><img src="/new1/Style/H/images/images/index_di.png" /></em>';} ?>
+	<?php if($vb['ifdianzibiao']==1){echo '<em class="ui-loantype"><img src="/p2p/Style/H/images/images/index_dian.png" /></em>';}else{echo '<em class="ui-loantype"><img src="/p2p/Style/H/images/images/index_di.png" /></em>';} ?>
 	<a class="fn-left w210 rrd-dimgray fn-text-overflow" href="<?php echo (getInvestUrl($vb["id"])); ?>" target="_blank" title="<?php echo ($vb["borrow_name"]); ?>"><?php echo (cnsubstr($vb["borrow_name"],17)); ?></a>
   </span>
   <span class="ui-list-field fn-left num text-right w90 pr30">预计<em class="value"><?php echo ($vb["borrow_interest_rate"]); ?></em>%</span>
@@ -226,14 +226,14 @@ $(function(){
   </span>
 </li><?php endforeach; endif; else: echo "" ;endif; ?>
 <li class="ui-list-more">
-  <a class="darkgray" href="/new1/invest/index.html" target="_blank">查看更多投资理财项目</a>
+  <a class="darkgray" href="/p2p/invest/index.html" target="_blank">查看更多投资理财项目</a>
 </li>
 </ul>
         </div>
       </div>
     <div class="clearfix w1180">
 <div class="float-left fb-home-box fb-home-boxP15 fb-home-w820">
-<h4 class="fb-home-H4 clearfix"><span>公司动态</span><span><img src="/new1/Style/H/images/images/1-140104201924.gif"></span><a href="/new1/index.php/home/help?bdgg/index.html" target="_blank" title="更多公司动态">更多&gt;</a></h4>
+<h4 class="fb-home-H4 clearfix"><span>公司动态</span><span><img src="/p2p/Style/H/images/images/1-140104201924.gif"></span><a href="/p2p/index.php/home/help?bdgg/index.html" target="_blank" title="更多公司动态">更多&gt;</a></h4>
 <div class="fb-home-mediaReport clearfix">
 <?php $xlist = getArticleList(array("type_id"=>22,"limit"=>'0,1')); foreach($xlist['list'] as $kx => $va){ ?>
 <div class="fb-home-media">
@@ -251,7 +251,7 @@ $(function(){
 </ul>
 </div></div> </div>
 <div class="float-right fb-home-box fb-home-boxP15 fb-home-w345">
-<h4 class="fb-home-H4 clearfix"><span>发标公告<i class="fb-home-new"></i></span><a href="/new1/index.php/home/help?fbgg/index.html" target="_blank" title="更多公告">更多&gt;</a></h4>
+<h4 class="fb-home-H4 clearfix"><span>发标公告<i class="fb-home-new"></i></span><a href="/p2p/index.php/home/help?fbgg/index.html" target="_blank" title="更多公告">更多&gt;</a></h4>
 <ul class="fb-home-kxTrend">
 <?php foreach($noticeList['list'] as $kx => $vn){ ?>
 <li>
@@ -263,7 +263,7 @@ $(function(){
 </div>
 <div class="clearfix w1180">
 	<div class="float-left fb-home-box fb-home-boxP15 fb-home-w821">
-		<h4 class="fb-home-H4 clearfix"><span>新闻中心</span><a href="/new1/index.php/home/help?news" target="_blank" title="更多新闻">更多&gt;</a></h4>
+		<h4 class="fb-home-H4 clearfix"><span>新闻中心</span><a href="/p2p/index.php/home/help?news" target="_blank" title="更多新闻">更多&gt;</a></h4>
 		<div class="fb-home-mediaReport1 clearfix">
 			<ul>
 					<?php $jishu = 1; $xlist = getArticleList(array("type_id"=>2,"limit"=>20)); foreach($xlist['list'] as $kx => $va){ if($va.art_img != "" && $jishu <= 4){ ?>	
@@ -299,19 +299,19 @@ $(function() {
 </script>
 ﻿<div class="bot" align="center">
 	<div class="bot_1000">
-    <a href="/new1/index.php/home/help/index?aboutus/jianjie.html">关于我们</a>    |    <a href="/new1/index.php/Home/borrow/index.html">我要借款</a>    |    <a href="/new1/index.php/home/invest/index.html">P2P投资项目</a>    |    <a href="/new1/index.php/home/help?news/index.html">新闻中心</a>    |    <a href="/new1/index.php/home/bangzhu/new.html">新手指引</a>    |    <a href="/new1/sitemap.html" target="_blank">网站地图</a>
+    <a href="/p2p/index.php/home/help/index?aboutus/jianjie.html">关于我们</a>    |    <a href="/p2p/index.php/Home/borrow/index.html">我要借款</a>    |    <a href="/p2p/index.php/home/invest/index.html">P2P投资项目</a>    |    <a href="/p2p/index.php/home/help?news/index.html">新闻中心</a>    |    <a href="/p2p/index.php/home/bangzhu/new.html">新手指引</a>    |    <a href="/p2p/sitemap.html" target="_blank">网站地图</a>
     </div>    
 </div>
 <div class="bottom">
 	<div class="bottom_1000">
     	<div class="bottom_a1">
         	<div class="kfleft">
-                <span class="b_img"><img src="/new1/Style/H/images/images/d_zxkf.png" /></span>
+                <span class="b_img"><img src="/p2p/Style/H/images/images/d_zxkf.png" /></span>
                 <span class="b_kefu">在线客服</span>
                 <span class="b_licai"><?php $_result=get_qq(0);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vq): $mod = ($i % 2 );++$i; echo (cnsubstr($vq["qq_title"],6,0,"utf-8",false)); ?>：<?php echo ($vq["qq_num"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php endforeach; endif; else: echo "" ;endif; ?></span>
         	</div>
             <div class="rightk">
-                <span class="r_img"><img src="/new1/Style/H/images/images/d_qqqun.png" /></span>
+                <span class="r_img"><img src="/p2p/Style/H/images/images/d_qqqun.png" /></span>
                 <span class="r_txt"><?php $_result=get_qq(1);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vq): $mod = ($i % 2 );++$i;?>QQ交流群 : <?php echo ($vq["qq_num"]); endforeach; endif; else: echo "" ;endif; ?></span>
             </div>
             <div class="clear"></div>
@@ -319,7 +319,7 @@ $(function() {
 				<li>客户服务：</li>
 				<li><a class="weibo" href="http://weibo.com/ronghaihang" target="_blank">融海行新浪微博</a></li>
 				<li><a class="qqweibo" href="#" onclick="return false;" onmousemove="document.getElementById('myWXpic').style.display='block';" onmouseout="document.getElementById('myWXpic').style.display='none'">融海行微信</a></li>
-                <li id="myWXpic" style="display: none; position: absolute; width: 138px; height: 138px; left: 41%;"><img style="height:138px;width:138px;float:none;margin:0px;" alt="" src="/new1/UF/Uploads/Article/20150522101245.jpg"></li>
+                <li id="myWXpic" style="display: none; position: absolute; width: 138px; height: 138px; left: 41%;"><img style="height:138px;width:138px;float:none;margin:0px;" alt="" src="/p2p/UF/Uploads/Article/20150522101245.jpg"></li>
 				<div class="clear"></div>
 			 </ul>
         </div>
@@ -337,7 +337,7 @@ $(function() {
     <div class="cn">
       <h3 class="titZx">融海行在线客服</h3>
       <ul>
-		<?php $_result=get_qq(0);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vq): $mod = ($i % 2 );++$i;?><li><span>客服</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo ($vq["qq_num"]); ?>&site=qq&menu=yes"><img border="0" src="/new1/Style/H/images/images/online.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li><?php endforeach; endif; else: echo "" ;endif; ?>
+		<?php $_result=get_qq(0);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vq): $mod = ($i % 2 );++$i;?><li><span>客服</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo ($vq["qq_num"]); ?>&site=qq&menu=yes"><img border="0" src="/p2p/Style/H/images/images/online.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li><?php endforeach; endif; else: echo "" ;endif; ?>
 		<li><?php echo get_ad(11);?></li>
 		<?php $_result=get_qq(2);if(is_array($_result)): $i = 0; $__LIST__ = $_result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vq): $mod = ($i % 2 );++$i;?><li style="border:none;"><span>电话：<?php echo ($vq["qq_num"]); ?></span> </li><?php endforeach; endif; else: echo "" ;endif; ?>
       </ul>
