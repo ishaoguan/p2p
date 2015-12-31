@@ -1,0 +1,3 @@
+<?php
+//000012960000a:2:{s:7:"ad_type";s:1:"1";s:7:"content";a:4:{i:0;a:3:{s:3:"img";s:35:"UF/Uploads/Ad/20150527092508192.jpg";s:4:"info";s:41:"房产抵押,归还本息,选择融海行";s:3:"url";s:26:"http://www.ronghaihang.cn/";}i:1;a:3:{s:3:"img";s:35:"UF/Uploads/Ad/20150527092514558.jpg";s:4:"info";s:55:"全城连锁实体店,建立一体化商业盈利系统";s:3:"url";s:26:"http://www.ronghaihang.cn/";}i:2;a:3:{s:3:"img";s:35:"UF/Uploads/Ad/20150505155324964.jpg";s:4:"info";s:48:"全新的借贷理财模式,安全,省心,快捷";s:3:"url";s:26:"http://www.ronghaihang.cn/";}i:3;a:3:{s:3:"img";s:35:"UF/Uploads/Ad/20150505155316604.jpg";s:4:"info";s:27:"新版融海行全新上线";s:3:"url";s:26:"http://www.ronghaihang.cn/";}}}
+?>

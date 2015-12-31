@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { font-family: "微软雅黑"; list-style:none; font-size: 14px; margin: 0; padding: 0; }
+body {}
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset, img { border: 0 }
+address, caption, cite, code, dfn, em, strong, th, var { font-style: normal; font-weight: normal }
+ol, ul { list-style: none }
+caption, th { text-align: left }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal }
+a img { border: none; }
+ul, ol { list-style: none; }
+input, textarea { outline: none; }
+a{text-decoration:none; color:#000; }
+a:hover{color:#db1e1e; text-decoration:none;}
+.red { color: #FF0000;}
+.clear{ clear:both;}
+

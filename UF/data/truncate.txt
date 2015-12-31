@@ -1,0 +1,71 @@
+
+
+TRUNCATE lzh_auto_borrow;
+TRUNCATE lzh_borrow_info;
+TRUNCATE lzh_borrow_info_lock;
+TRUNCATE lzh_borrow_investor;
+TRUNCATE lzh_borrow_tip;
+TRUNCATE lzh_borrow_verify;
+TRUNCATE lzh_borrow_vouch;
+
+
+TRUNCATE lzh_feedback;
+
+
+TRUNCATE lzh_investor_detail;
+TRUNCATE lzh_invest_credit;
+TRUNCATE lzh_invest_detb;
+TRUNCATE lzh_jifen_choujiang;
+
+TRUNCATE lzh_kvtable;
+TRUNCATE lzh_market_address;
+TRUNCATE lzh_market_goods;
+TRUNCATE lzh_market_jifenlist;
+TRUNCATE lzh_market_log;
+
+
+
+TRUNCATE lzh_member_apply;
+
+TRUNCATE lzh_member_borrow_show;
+
+
+
+
+
+
+
+
+TRUNCATE lzh_member_integrallog;
+TRUNCATE lzh_member_limitlog;
+
+TRUNCATE lzh_member_money;
+TRUNCATE lzh_member_moneylog;
+TRUNCATE lzh_member_msg;
+
+TRUNCATE lzh_member_remark;
+
+TRUNCATE lzh_member_withdraw;
+
+TRUNCATE lzh_oauth;
+
+
+
+TRUNCATE lzh_today_reward;
+TRUNCATE lzh_transfer_borrow_info;
+TRUNCATE lzh_transfer_borrow_investor;
+TRUNCATE lzh_transfer_detail;
+TRUNCATE lzh_transfer_investor_detail;
+
+TRUNCATE lzh_video_apply;
+
+TRUNCATE lzh_transfer_borrow_info_lock;
+
+
+
+
+
+
+
+
+

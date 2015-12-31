@@ -1,0 +1,192 @@
+﻿<include file="Public:_header_common" />
+<title>{$glo.index_title}</title>
+<meta http-equiv="keywords" content="{$glo.web_keywords}" />
+<meta http-equiv="description" content="{$glo.web_descript}" />
+
+<script type="text/javascript" src="__ROOT__/Style/H/js/common.js" language="javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="__ROOT__/nStyle/H/css/css.css" />
+
+<script type="text/javascript">
+var Transfer_invest_url = "__APP__/tinvest";
+</script>
+
+<script type="text/javascript" src="__ROOT__/Style/H/js/area.js"></script>
+
+<include file="Public:_header_main" />
+<taglib name="htmlA" />
+
+<script type="text/javascript">
+var url = window.location.href;
+if(url)var allargs = url.split("?")[1];
+if(allargs)var tab1= allargs.split("=")[1];
+if(tab1)var tab= tab1.split("&")[0];
+
+$(function(){ 
+    if(tab==9){
+        $('#a1').addClass("show_style");
+    }
+    if(tab==4){
+        $('#a2').addClass("show_style");
+        $('#a1').removeClass("show_style");
+    }
+    if(tab==6){
+        $('#a3').addClass("show_style");
+        $('#a1').removeClass("show_style");
+    };
+    if(tab==7){
+        $('#a4').addClass("show_style");
+        $('#a1').removeClass("show_style");
+    };
+    if(tab==10){
+        $('#a5').addClass("show_style");
+        $('#a1').removeClass("show_style");
+        $('#black').attr('style','display:block');
+        $('#con').attr('style','display:none');
+    };
+});
+
+</script>
+
+<div class="list_banner">
+    <div class="list_banner_left">
+        <div class="list_banner_left_l">
+            <h2>
+                筛选理财项目</h2>
+            <ul>
+                <li class="saixuanlx">标的状态</li>
+                <php>foreach($searchMap['borrow_status'] as $key=>$v){</php>
+                <php>if($key==$searchUrl['borrow_status']['cur']){</php>
+                <li class="buxz"><a>{$v}</a></li>
+                <php>}else{</php>
+                <li><a class="a_lb_2" href="__URL__/index.html?type=search&{$searchUrl.borrow_status.url}&borrow_status={$key}">
+                    {$v}</a></li>
+                <php>}</php>
+                <php>}</php>
+            </ul>
+            <!--<ul class="dierge">
+                <li class="saixuanlx">信用等级</li>
+                <php>foreach($searchMap['leve'] as $key=>$v){</php>
+                <php>if($key==$searchUrl['leve']['cur']){</php>
+                <li class="buxz"><a>{$v}</a></li>
+                <php>}else{</php>
+                <li><a class="a_lb_2" href="__URL__/index.html?type=search&{$searchUrl.leve.url}&leve={$key}">
+                    {$v}</a></li>
+                <php>}</php>
+                <php>}</php>
+            </ul>-->
+            <ul>
+                <li class="saixuanlx">借款期限</li>
+                <php>foreach($searchMap['borrow_duration'] as $key=>$v){</php>
+                <php>if($key==$searchUrl['borrow_duration']['cur']){</php>
+                <li class="buxz"><a href="__ROOT__/invest/index.html">{$v}</a></li>
+                <php>}else{</php>
+                <li><a class="a_lb_2" href="__URL__/index.html?type=search&{$searchUrl.borrow_duration.url}&borrow_duration={$key}">
+                    {$v}</a></li>
+                <php>}</php>
+                <php>}</php>
+            </ul>
+            <ul style="border-bottom: none;">
+                <form name="searchform" action="__URL__/index" method="get">
+                <li class="saixuanlx">关键词搜索:</li>
+                <li style="width: 250px;">
+                    <htmla:radio id="is_keyword" value="key|vo.is_show" default="0|不限制,1|借款用户,2|借款名称" />
+                </li>
+                <li>
+                    <input class="searchkeywords" name="searchkeywords" type="text" value="{$searchMap.searchkeywords}"
+                        style="margin-top: 6px;" />
+                </li>
+                <li>
+                    <input type="submit" name="btnSubmit" id="btnSubmit" value=" " style="height: 29px;
+                        margin-left: 77px; cursor: pointer; margin-top: 3px;" class="btn">
+                </li>
+                </form>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="list_main main">
+    <div class="list_main_top">
+        <div class="wleft">
+            <h3 class="title_03">
+                投资列表<a id="wpass" class="more" href="/tools/tool.html">理财计算器</a></h3>
+        </div>
+    </div>
+    <div class="list04">
+        <volist name="list.list" id="vb">
+      <div class="div_table_bian">
+          <table border="0"  onmouseover="this.style.backgroundColor='#FFD9D8'" onMouseOut="this.style.backgroundColor='#fff'" class="con_font_ul03_new">
+            <tr height="30px">
+              <td width="100" rowspan="4" ><div> <img style="margin: 10px; width: 80px; height: 80px; border:1px solid #CCC; padding:5px;" src="../../../../../nStyle/header/images/noavatar_middle.gif"  complete="complete"/></div></td>
+              <td colspan="5" align="left" height="25"><span style="margin-top:6px; display:block; float:left">{:getIco($vb)}</span><a href="{$vb.id|getInvestUrl=###}" title="{$vb.borrow_name}" class="BL_name">{$vb.borrow_name|cnsubstr=###,17}</a></td>
+            </tr>
+            <tr height="25px">
+              <td width="180px" align="left"  height="23" valign="bottom"  > 借款金额：<strong style="font-size:16px;font-family:'微软雅黑'; color:#C21402; font-weight: bolder;">{$vb.borrow_money|getMoneyFormt=###}</strong> </td>
+              <td width="150px"   align="left" valign="bottom" > 利  率:{$vb.borrow_interest_rate}% / 每年</td>
+              
+              <td width="180px" height="24" align="left" valign="middle" class="BL_jiang" >投标奖：{$vb.reward_num}%</td>
+              <td width="150px"   align="left" valign="bottom" > 利  率:{$vb.borrow_interest_rate}% / 每年</td>
+              <td class="dengji" width="160"><if condition="$vb.borrow_status eq 3"> <a href="javascript:;"><img class="anNiuYLB" src="__ROOT__/Style/H/images/status/touM.gif" /></a>
+            <elseif condition="$vb.borrow_status eq 4"/>
+            <a href="javascript:;"><img class="anNiuDDFS" src="__ROOT__/Style/H/images/status/touM.gif" /></a>
+            <elseif condition="$vb.borrow_status eq 6"/>
+            <a href="javascript:;"><img  class="anNiuHKZ" src="__ROOT__/Style/H/images/status/touM.gif"  /></a>
+            <elseif condition="$vb.borrow_status gt 6"/>
+            <a href="{$vb.id|getInvestUrl=###}"><img class="anNiuYWC" src="__ROOT__/Style/H/images/status/touM.gif"  /></a>
+            <else/>
+            <a href="{$vb.id|getInvestUrl=###}"><img class="anNiuTB" src="__ROOT__/Style/H/images/status/touM.gif" /></a> </if>
+        </td>
+            </tr>
+            <tr height="25px">
+              <td width="180px" align="left"  height="23" valign="bottom" class="BL_lilv" >发布人：</td>
+              <td width="160px" align="left" valign="bottom" class="BL_lilv">发标时间：<span  class="BL_time"> {$vb.add_time|date="Y-m-d",###}</span></td>
+              <td width="160px" align="left" valign="bottom">剩余投标：<strong class="BL_time">{$vb.need|getMoneyFormt=###}万</strong>元</td>
+              <td width="160px" align="left" valign="bottom">{$Bconfig['REPAYMENT_TYPE'][$vb['repayment_type']]}</td>
+            </tr>
+            <tr height="25px">
+              <td width="170px"  align="left" valign="bottom">
+              <div class="BL_jindu">借款进度：</div>
+                <span class="progress"> <span class="precent" style="width:{$vb.progress}%"></span><span style="position:absolute; line-height:12px;">{$vb.progress}%</span> </span>
+              </td>
+              <td align="left" valign="middle">{$Bconfig['REPAYMENT_TYPE'][$vb['repayment_type']]}</td>
+              <td align="left" valign="middle"> <!--< i f condition="$ vb.ifDanBaoJiGou eq 1">担保机构：</i f>--><!--信用等级：{ $ vb.credits|getLeveIco=###,2 }--></td>
+              <td align="left" valign="middle"></td>
+            </tr>
+          </table>
+        </div>
+    </volist>
+    </div>
+    </table>
+</div>
+<div class="list_bottom">
+    <div class="list_bottom_right">
+        <ul>
+            {$list.page}
+        </ul>
+    </div>
+</div>
+
+<script language="javascript">
+		$(function() {
+			$(".borrowlistp").bind("mouseover", function(){
+				$(this).css("background", "#fce8e1");
+			})
+
+			$(".borrowlistp").bind("mouseout", function(){
+				$(this).css("background", "#fff");
+			})
+
+
+			$(".borrowlistl").bind("mouseover", function(){
+				$(this).css("background", "#f8f8f8");
+			})
+
+			$(".borrowlistl").bind("mouseout", function(){
+				$(this).css("background", "#fff");
+			})
+		});
+
+</script>
+
+<!--中部结束-->
+<include file="Public:_footer" />

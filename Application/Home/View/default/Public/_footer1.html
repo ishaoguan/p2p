@@ -1,0 +1,69 @@
+﻿<div class="bot" align="center">
+	<div class="bot_1000">
+    <a href="__ROOT__/index.php/home/help/index?aboutus/jianjie.html">关于我们</a>    |    <a href="__ROOT__/index.php/Home/borrow/index.html">我要借款</a>    |    <a href="__ROOT__/index.php/home/invest/index.html">P2P投资项目</a>    |    <a href="__ROOT__/index.php/home/help?news/index.html">新闻中心</a>    |    <a href="__ROOT__/index.php/home/bangzhu/new.html">新手指引</a>    |    <a href="__ROOT__/sitemap.html" target="_blank">网站地图</a>
+    </div>    
+</div>
+<div class="bottom">
+	<div class="bottom_1000">
+    	<div class="bottom_a1">
+        	<div class="kfleft">
+                <span class="b_img"><img src="__ROOT__/Style/H/images/images/d_zxkf.png" /></span>
+                <span class="b_kefu">在线客服</span>
+                <span class="b_licai"><volist name=":get_qq(0)" id="vq">{$vq.qq_title|cnsubstr=###,6,0,"utf-8",false}：{$vq.qq_num}&nbsp;&nbsp;&nbsp;&nbsp;</volist></span>
+        	</div>
+            <div class="rightk">
+                <span class="r_img"><img src="__ROOT__/Style/H/images/images/d_qqqun.png" /></span>
+                <span class="r_txt"><volist name=":get_qq(1)" id="vq">QQ交流群 : {$vq.qq_num}</volist></span>
+            </div>
+            <div class="clear"></div>
+			<ul class="servericon">
+				<li>客户服务：</li>
+				<li><a class="weibo" href="http://weibo.com/ronghaihang" target="_blank">融海行新浪微博</a></li>
+				<li><a class="qqweibo" href="#" onclick="return false;" onmousemove="document.getElementById('myWXpic').style.display='block';" onmouseout="document.getElementById('myWXpic').style.display='none'">融海行微信</a></li>
+                <li id="myWXpic" style="display: none; position: absolute; width: 138px; height: 138px; left: 41%;"><img style="height:138px;width:138px;float:none;margin:0px;" alt="" src="__ROOT__/UF/Uploads/Article/20150522101245.jpg"></li>
+				<div class="clear"></div>
+			 </ul>
+        </div>
+        {$glo.bottom}
+    </div>
+</div>
+<p class="dv1"><a href="http://www.ronghaihang.cn/" style="color:#ffffff;">融海行</a> www.ronghaihang.cn 版权所有 冀ICP备14020074号-1</p>
+<!--代码部分begin-->
+<div id="floatTools" class="rides-cs">
+  <div class="floatL">
+  	<a id="aFloatTools_Show" class="btnOpen" title="查看在线客服" style="top:20px;display:block" href="javascript:void(0);">展开</a>
+  	<a id="aFloatTools_Hide" class="btnCtn" title="关闭在线客服" style="top:20px;display:none" href="javascript:void(0);">收缩</a>
+  </div>
+  <div id="divFloatToolsView" class="floatR" style="display: none;width: 140px;">
+    <div class="cn">
+      <h3 class="titZx">融海行在线客服</h3>
+      <ul>
+		<volist name=":get_qq(0)" id="vq">
+			<li><span>客服</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$vq.qq_num}&site=qq&menu=yes"><img border="0" src="__ROOT__/Style/H/images/images/online.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li>
+        </volist>
+		<li>{:get_ad(11)}</li>
+		<volist name=":get_qq(2)" id="vq">
+			<li style="border:none;"><span>电话：{$vq.qq_num}</span> </li>
+		</volist>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+	$(function(){
+		$("#aFloatTools_Show").click(function(){
+			$('#divFloatToolsView').animate({width:'show',opacity:'show'},100,function(){ $('#divFloatToolsView').show(); });
+			$('#aFloatTools_Show').hide();
+			$('#aFloatTools_Hide').show();				
+		});
+		$("#aFloatTools_Hide").click(function(){
+			$('#divFloatToolsView').animate({width:'hide', opacity:'hide'},100,function(){ $('#divFloatToolsView').hide(); });
+			$('#aFloatTools_Show').show();
+			$('#aFloatTools_Hide').hide();	
+		});
+	});
+</script>
+<!--代码部分end-->
+
+</body>
+</html>

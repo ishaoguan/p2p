@@ -1,0 +1,146 @@
+<include file="Public:_header_common1" />
+<title>{$glo.index_title}</title>
+<meta http-equiv="keywords" content="{$glo.web_keywords}" />
+<meta http-equiv="description" content="{$glo.web_descript}" />
+<script type="text/javascript" src="__ROOT__/Style/H/js/area.js"></script>
+<script type="text/javascript" src="__ROOT__/Style/H/js/common.js" language="javascript"></script>
+<script type="text/javascript">
+var Transfer_invest_url = "__APP__/tinvest";
+</script>
+<include file="Public:_header_main1" />
+<div class="d_cc_banner" style="background:url({:get_ad(5)}) center no-repeat;"></div>
+<div class="d_main_1000">
+    <div class="d_project">
+    	<ul>
+        	<li ><a href="/invest/index.html">普通借款</a></li>
+            <li ><a href="/debt/index">债权转让</a></li>
+            <li class="borrow"><a href="/fund/index.html">债权标</a></li>
+        </ul>
+    </div>
+    
+    <div class="d_center2">
+        <div class="sxb">
+        	<div class="sxb_title">
+        	<h1>债权标</h1>
+            <span>省时省心，不用抢标的理财计划！</span>
+            </div>
+        </div>
+        <div class="tz_z1">
+		
+			<!--<volist name="list.list" id="vb">
+        	<div class="tz_shengxinb">
+				<div class="dingkuang">
+            	<table width="100%" border="0">
+                  <tr>
+                    <td width="69%" height="36" style="text-align:center;">
+                    <span class="ff20">{$vb.borrow_interest_rate}</span>
+                    <span class="ff20">%</span>
+                    <span class="ff20 f18 "> - </span>
+                    <span class="ff20" >{$vb.shouyi}</span>
+                    <span class="ff20">%</span>
+                    </td>
+                    <td width="31%" style="background:#d4d4d4; text-align:center;"><span class="f22">{$vb.borrow_duration}</span><span class="f14">个月</span></td>
+                  </tr>
+                  <tr>
+                    <td height="37" style="text-align:center;"><span class="f13 gay">年化收益率</span></td>
+                    <td style="text-align:center;"><span class="f13 gay">期限</span></td>
+                  </tr>
+				</table>
+       		  </div>
+                <div class="tck">
+                <table width="100%" border="0">
+                      <tr style="border-bottom:1px dotted #d4d4d4; padding:0 10px;">
+                        <td height="34" colspan="3"><a href="{$vb.id|getFundUrl=###}"><span class="f8">省心宝（{$vb.borrow_name|cnsubstr=###,50}）</span></a></td>
+                      </tr>
+                      <tr>
+                        <td height="30" colspan="3"><span class="f55">当前进度</span>
+                        <div class="progress_f55">
+							<div class="nth_1" style="width:{$vb.progress}%;"></div>
+							<div class="nth_2">
+								<div>{$vb.progress}%</div>
+							</div>
+						</div>
+                    	</td>
+                      </tr>
+                      <tr>
+                        <td width="45%" height="30"><span class="f56">总金额：{$vb.borrow_money|getMoneyFormt=###}元</span></td>
+                        <td width="40%"><span class="f56">{$vb.investornum}人已加入</span></td>
+						<if condition="$vb['transfer_out']-$vb['transfer_total'] eq 0">
+						  <td width="15%"><div class="pect_jr"><a><span class="pect">已满</span></a></div></td>
+						<elseif condition="$vb['online_time'] lt time()+300 and $vb['online_time'] gt time()" />
+						  <td width="15%"><div class="pect_jr"><a><span class="pect">更新中</span></a></div></td>
+						<elseif condition="$vb['online_time'] lt time()" />
+						  <td width="15%"><div class="pect_jr"><a href="{$vb.id|getFundUrl=###}"><span class="pect">加入</span></a></div></td>
+						</if>
+                  </tr>
+			   </table>
+
+                </div>
+                        <div class="clear"></div>
+   		  </div>
+		  </volist>-->
+		  
+		  
+		   <ul class="ui-list ui-list-m ui-list-invest" id="loan-list">
+
+			<li class="ui-list-header fn-clear" id="loan-list-header">
+			  <span class="ui-list-title fn-left color-gray-text w260">借款标题</span>
+			  <span class="ui-list-title fn-left color-gray-text text-center w120">年利率</span>
+			  <span class="ui-list-title fn-left color-gray-text text-center w160">金额</span>
+			  <span class="ui-list-title fn-left color-gray-text text-center w100">期限</span>
+			  <span class="ui-list-title fn-left color-gray-text text-center w110">进度</span>
+			  <span class="ui-list-title fn-left color-gray-text text-center w80"></span>
+			</li>
+
+			<volist name="list.list" id="vb">
+			<li class="ui-list-item fn-clear ">
+			  <span class="ui-list-field fn-left text-big w260">
+				<!--<em class="ui-loantype XYRZ" title="信用认证标"></em>-->
+				<php>if($vb['borrow_type']==5 && $vb['borrow_btype']==1){echo '<em class="ui-loantype"><img src="__ROOT__/Style/H/images/images/index_di.png" /></em>';}elseif($vb['borrow_type']==5 && $vb['borrow_btype']==2){echo '<em class="ui-loantype"><img src="__ROOT__/Style/H/images/images/index_zhai.png" /></em>';}</php>
+				<a class="fn-left w210 rrd-dimgray fn-text-overflow" href="{$vb.id|getFundUrl=###}" target="_blank" title="{$vb.borrow_name}">{$vb.borrow_name|cnsubstr=###,17}</a>
+			  </span>
+			  <span class="ui-list-field fn-left num text-right w90 pr30"><em class="value">{$vb.borrow_interest_rate}</em>%</span>
+			  <span class="ui-list-field fn-left num text-right w130 pr30"><em class="value">{$vb.borrow_money|getMoneyFormt=###}</em>元</span>
+			  <span class="ui-list-field fn-left num text-right w70 pr30"><em class="value">{$vb.borrow_duration}</em><if condition="$vb.repayment_type eq 1">天<else/>个月</if></span>
+			  <span class="ui-list-field fn-left w110">
+				<strong class="yuan progressbar"> <em>{$vb.progress}</em>% </strong>
+			  </span>
+			  <span class="ui-list-field fn-left w80">
+				<if condition="$vb.borrow_status eq 4">
+					<a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-IN_PROGRESS" ><span class="IN_PROGRESS">复审中</span></a>
+				<elseif condition="$vb.borrow_status eq 3"/>
+				   <a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-IN_PROGRESS" ><span class="IN_PROGRESS">已流标</span></a>
+				<elseif condition="$vb.borrow_status eq 6"/>
+					<a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-IN_PROGRESS"><span class="IN_PROGRESS">还款中</span></a>
+				<elseif condition="$vb.borrow_status gt 6"/>
+					<a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-IN_PROGRESS" href="{$vb.id|getInvestUrl=###}"><span class="READY FIRST_READY">已满标</span></a>
+				<else/>
+					<a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-IN_PROGRESS" href="{$vb.id|getInvestUrl=###}"><span class="OPEN">投标</span></a>
+				</if>
+				
+			  </span>
+			</li>
+			</volist>
+		  </ul>
+		  
+        </div>
+
+        <div class="clear"></div>
+        <div id="list_page">
+            <div class="d_page">
+                {$list.page}
+            </div>
+    	</div>
+   	</div>
+    
+</div>
+
+<script>
+$(function() {
+    $('.progressbar').each(function(index, el) {
+        var num = $(this).find('em').text();
+        $(this).addClass('progressbar-' + num);
+    });
+});
+</script>
+<include file="Public:_footer1" />

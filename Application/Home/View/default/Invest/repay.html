@@ -1,0 +1,111 @@
+<include file="Public:_header_common1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$glo.index_title}</title>
+<meta http-equiv="keywords" content="{$glo.web_keywords}" />
+<meta http-equiv="description" content="{$glo.web_descript}" />
+<meta property="wb:webmaster" content="37afd1196b6d28b7" />
+<script type="text/javascript" src="__ROOT__/Style/H/js/js/jquery-1.4.7.min.js"></script>
+<include file="Public:_header_main1" />
+<taglib name="htmlA" />
+<!--顶部结束-->
+<div class="d_cc_banner" style="background:url({:get_ad(5)}) center no-repeat;"></div>
+<div class="d_main_1000">
+    <div class="d_project">
+    	<ul>
+        	<li class="borrow"><a href="__ROOT__/index.php/home/invest/index.html">普通借款</a></li>
+			<li class="borrow" style="width:180px;" ><a  style="width:180px; padding:0 0;" href="__ROOT__/index.php/home/invest/repay.html?borrow_status=6">标的最近还款计划</a></li>
+           
+        </ul>
+    </div>
+    <div class="d_center2">
+        <div class="sxb">
+        	<div class="sxb_title">
+        	<h1>投资列表</h1>
+            <span>省时省心，不用抢标的理财计划！</span>
+            </div>
+        </div>
+		<!--<volist name="list.list" id="vb">
+        <div class="tz_z1">
+        	<div class="tz_loan">
+                <div class="item_fl">
+                    <div class="title_c">
+						<php>if($vb['borrow_type']==5){echo '<div class="title_ico"><img src="__ROOT__/Style/H/images/images/index_di.png" /></div>';}</php>
+                        <div class="title_text"><a href="{$vb.id|getInvestUrl=###}" target="_blank">{$vb.borrow_name|cnsubstr=###,17}</a></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="tz_des">
+                        <div class="amount des">金额：<span class="amount_a">{$vb.borrow_money|getMoneyFormt=###}</span> 元</div>
+                        <div class="ratio des">年利率：<span class="ratio_a">{$vb.borrow_interest_rate}%</span></div>
+                        <div class="month des">期限：<span class="month_a">{$vb.borrow_duration} <if condition="$vb.repayment_type eq 1">天<else/>个月</if></span></div>
+                        <div class="return_type des">还款方式：<span>{$Bconfig['REPAYMENT_TYPE'][$vb['repayment_type']]}</span></div>
+                    </div>
+                </div>
+                <div class="item_fr">
+                    <div class="progress_ct">
+                        <div class="progress_c">
+                            剩余 <span class="number_16">{$vb.need|getMoneyFormt=###}</span> 元
+                        </div>
+                        <p class="yuan progressbar"> <span>{$vb.progress}</span>% </p>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="t_button">
+					<if condition="$vb.borrow_status eq 4">
+						<a href="javascript:;"  class="invest-button"><img src="__ROOT__/Style/H/images/images/fsz.png" /></a>
+					<elseif condition="$vb.borrow_status eq 6"/>
+                        <a href="javascript:;"  class="invest-button"><img src="__ROOT__/Style/H/images/images/hkz.png" /></a>
+					<elseif condition="$vb.borrow_status eq 3"/>
+                        <a href="javascript:;"  class="invest-button"><img src="__ROOT__/Style/H/images/images/ylb.png" /></a>
+					 <elseif condition="$vb.borrow_status gt 6"/>
+						<a href="{$vb.id|getInvestUrl=###}"  class="invest-button"><img src="__ROOT__/Style/H/images/images/ywc.png" /></a>
+					<else/>
+						<a href="{$vb.id|getInvestUrl=###}"  class="invest-button"><img src="__ROOT__/Style/H/images/images/lktb.png" /></a>
+					</if>
+                    </div>
+                </div>
+                <div class="clear"></div>
+    		</div>
+        </div>
+        </volist>-->
+        <div class="tz_z1">
+			<ul class="ui-list ui-list-m ui-list-invest" id="loan-list">
+
+				<li class="ui-list-header fn-clear" id="loan-list-header">
+				  <span class="ui-list-title fn-left color-gray-text w260">借款标题</span>
+				  <span class="ui-list-title fn-left color-gray-text text-center w120">年利率</span>
+				  <span class="ui-list-title fn-left color-gray-text text-center w160">金额</span>
+				  <span class="ui-list-title fn-left color-gray-text text-center w100">期限</span>
+				  <span class="ui-list-title fn-left color-gray-text text-center w110">最近还款时间</span>
+				</li>
+				<volist name="list.list" id="vb">
+				<li class="ui-list-item fn-clear ">
+				  <span class="ui-list-field fn-left text-big w260">
+						<php>if($vb['borrow_type']==5){echo '<em class="ui-loantype"><img src="__ROOT__/Style/H/images/images/index_di.png" /></em>';}</php>
+						<a class="fn-left w210 rrd-dimgray fn-text-overflow" href="{$vb.id|getInvestUrl=###}" target="_blank" title="{$vb.borrow_name}">{$vb.borrow_name|cnsubstr=###,17}</a>
+				  </span>
+				  <span class="ui-list-field fn-left num text-right w90 pr30"><em class="value">{$vb.borrow_interest_rate}</em>%</span>
+				  <span class="ui-list-field fn-left num text-right w130 pr30"><em class="value">{$vb.borrow_money|getMoneyFormt=###}</em>元</span>
+				  <span class="ui-list-field fn-left num text-right w70 pr30"><em class="value">{$vb.borrow_duration}</em><if condition="$vb.repayment_type eq 1">天<else/>个月</if></span>
+				  <span class="ui-list-field fn-left w120"><php>echo $repay=date("Y-m-d H:i",M("investor_detail")->where('borrow_id='.$vb["id"])->getField("deadline"));</php></span>
+				  
+				</li>
+				</volist>
+			</ul>        	
+        </div>
+        <div class="clear"></div>
+        <div id="list_page">
+            <div class="d_page">
+                {$list.page}
+            </div>
+    	</div>
+   	</div>
+</div>
+
+<script>
+$(function() {
+    $('.progressbar').each(function(index, el) {
+        var num = $(this).find('em').text();
+        $(this).addClass('progressbar-' + num);
+    });
+});
+</script>
+<include file="Public:_footer1" />

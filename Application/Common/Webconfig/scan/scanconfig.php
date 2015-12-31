@@ -1,0 +1,2 @@
+<?php
+return array ( 'type' => 'php|js|html|sql', 'func' => 'com', 'code' => '', 'dir' => array ( 0 => 'D:\\clientweb\\lvmaque\\wwwroot/App', 1 => 'D:\\clientweb\\lvmaque\\wwwroot/CORE', 2 => 'D:\\clientweb\\lvmaque\\wwwroot/Public', 3 => 'D:\\clientweb\\lvmaque\\wwwroot/Rewrite', 4 => 'D:\\clientweb\\lvmaque\\wwwroot/Style', 5 => 'D:\\clientweb\\lvmaque\\wwwroot/UF', 6 => 'D:\\clientweb\\lvmaque\\wwwroot/Webconfig', 7 => 'D:\\clientweb\\lvmaque\\wwwroot/nStyle', 8 => 'D:\\clientweb\\lvmaque\\wwwroot/www.daikuan.net', ), ); ?>

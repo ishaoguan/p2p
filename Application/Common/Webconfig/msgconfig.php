@@ -1,0 +1,2 @@
+<?php
+return array ( 'stmp' => array ( 'server' => 'smtp.idccenter.net', 'port' => '25', 'user' => 'admin@ronghaihang.cn', 'pass' => 'rhh008', ), 'sms' => array ( 'type' => '0', 'user1' => 'yinshi', 'pass1' => 'x054062', 'user2' => '', 'pwd' => '', 'user3' => '', 'pass3' => '', ), 'baidu' => array ( 'apiKey' => 'k5mt8cZINNQI4Cl8gIqMAnnO', 'secretKey' => 'PychX6ID9fYt6DtFMmvMavxnP7xDS9kR', 'apkVersion' => '1.0', 'apkPath' => 'http://wap.lmq.apk', ), ); ?>

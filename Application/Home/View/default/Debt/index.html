@@ -1,0 +1,78 @@
+<include file="Public:_header_common1" />
+<title>{$glo.index_title}</title>
+<meta http-equiv="keywords" content="{$glo.web_keywords}" />
+<meta http-equiv="description" content="{$glo.web_descript}" />
+<script type="text/javascript" src="__ROOT__/Style/H/js/common.js" language="javascript"></script>
+<link type="text/css" rel="stylesheet" href="__ROOT__/Style/JBox/Skins/Currently/jbox.css"/>
+<script type="text/javascript">
+var Transfer_invest_url = "__APP__/tinvest";
+</script>
+<script type="text/javascript" src="__ROOT__/Style/H/js/area.js"></script>
+<include file="Public:_header_main1" />
+<script type="text/javascript">
+function buy_debt(invest_id)
+{
+    $.jBox("get:__URL__/buydebt?invest_id="+invest_id, {
+        title: "购买债权",
+        width: "auto",
+        buttons: {}
+    });
+}
+</script>
+<!--顶部结束-->
+<div class="d_cc_banner" style="background:url({:get_ad(5)}) center no-repeat;"></div>
+<div class="d_main_1000">
+    <div class="d_project">
+    	<ul>
+        	<li ><a href="/invest/index.html">普通借款</a></li>
+            <li class="borrow"><a href="/debt/index">债权转让</a></li>
+            <li><a href="/fund/index.html">债权标</a></li>
+        </ul>
+    </div>
+    
+    <div class="d_center2">
+        <div class="sxb">
+        	<div class="sxb_title">
+        	<h1>债权列表</h1>
+            <span>省时省心，不用抢标的理财计划！</span>
+            </div>
+        </div>
+		<volist name="list.data" id="vb">
+        <div class="tz_z1">
+        	<div class="tz_loan">
+                <div class="item_fl">
+                    <div class="title_c">
+						<php>if($vb['borrow_type']==5 && $vb['borrow_btype']==1){echo '<div class="title_ico"><img src="__ROOT__/Style/H/images/images/index_di.png" /></div>';}</php>
+                        <div class="title_text"><a href="{$vb.id|getInvestUrl=###}" target="_blank">{$vb.borrow_name}</a></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="tz_des">
+                        <div class="amount des">转让价格：<span class="amount_a">{$vb.transfer_price|default=0}</span> 元</div>
+                        <div class="ratio des">借款利率：<span class="ratio_a">{$vb.borrow_interest_rate}%</span></div>
+                        <div class="month des">待收本息：<span class="month_a">{$vb.transfer_price|default=0}元</span></div>
+                        <div class="return_type des">转让期数/总数：<span>{$vb.period}期/{$vb.total_period}期</span></div>
+                    </div>
+                </div>
+                <div class="item_fr">
+                	<div class="des_rr">
+						<if condition="$vb.status eq '2'">
+							<a href="javascript:;" onclick="buy_debt('{$vb.invest_id}')"><img src="__ROOT__/Style/H/images/images/msrg.png" /></a>
+                        <elseif condition="$vb.status eq '4'"/>
+							<img src="__ROOT__/Style/H/images/images/ywc.png" />
+						</if>
+                    </div>  
+                </div>
+                <div class="clear"></div>
+    		</div>
+        </div>
+        </volist> 
+        <div class="clear"></div>
+        <div id="list_page">
+            <div class="d_page">
+                {$list.page}
+            </div>
+    	</div>
+   	</div>
+    
+</div>
+<include file="Public:_footer1" />

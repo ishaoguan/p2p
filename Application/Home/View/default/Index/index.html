@@ -1,0 +1,234 @@
+<include file="Public:_header_common_index" />
+
+<include file="Public:_header_main1" />
+<div class="index_banner">
+<div class="flexslider">
+   <ul class="slides">
+		<volist name=":get_ad(4)" id="va">
+		<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2; background:url(__ROOT__/{$va.img}) no-repeat top center;" class="flex-active-slide" title="{$va.info}"><a href="" target="_blank">&nbsp;</a></li>
+		</volist>
+	</ul>
+  <div class="flex-position-nav"></div>
+   
+</div>
+</div>
+<script type="text/javascript" src="__ROOT__/Style/H/js/js/jquery-1.4.7.min.js"></script>
+  <script src="__ROOT__/Style/H/js/js/jquery.flexslider-min.js"></script>
+ <script>
+$(function(){
+	$('.flexslider').flexslider({
+		directionNav: true,
+		pauseOnAction: false,
+		directionNav:false,
+		controlsContainer:".flex-position-nav"
+	});
+});
+</script>
+<div class="gg-list">
+			<!-- listfour begin -->
+			<div class="yk-grid-col1">
+				<div class="list-four">
+					<div style="width: 776px;float: left;">
+						<ul>
+							<a href="__ROOT__/index.php/home/help/index?aboutus/jianjie.html"><li class="list3"><h1>专业</h1><p style="text-align:center; padding-top: 5px;">资深团队，银行级风控标准</p></li></a>
+
+							<a href="__ROOT__/index.php/home/bangzhu/safe.html"><li class="list1"><h1>安全</h1><p style="text-align:center; padding-top: 5px;">线下实体，100%本息保障</p></li></a>
+						
+							<a href="__ROOT__/index.php/home/help?news/index.html"><li class="list2"><h1>透明</h1><p style="text-align:center; padding-top: 5px;">新手指引，全方位了解平台</p></li></a>
+						
+								
+							
+						</ul>
+					</div>
+					<div class="d_shuju" style="float: right;">
+						<div class="d_sj_title"><img src="__ROOT__/Style/H/images/images/d_shuju.png" width="138" height="24" /></div>
+						<h1 style=" padding-top: 12px;">用户投资总额</h1>
+						<p class="d_number" style="padding: 10px 0 0 0;"><?php echo number_format($mborrowOut,2); ?>元</p>
+						<h1 style=" padding-top: 12px;">用户赚取收益</h1>
+						<p class="d_number" style="padding-top: 10px;">{$shouyi}元</p>
+					</div>
+				</div>
+			</div>
+			<!-- listfour end -->
+</div>
+<div class="main">
+	<div class="main_1000">
+		<div class="recom">
+    		<div class="layer l3">
+                <div class="tit t4"><a class="mo" href="#"></a><h2>最新标的<span>省时省心，安全灵活的理财计划！</span></h2></div>
+    			<div class="pt_con1">
+                    <ul class="rk3_cen">
+						<volist name="listBorrow1.list" id="vb">
+                        <li style=" cursor: pointer;">
+                            <!--<div class="zhuan" style="float:right"><img src="images/zhuan_1.png"></div>-->
+                            <!--<p class="bt"><a href="{$vb.id|getFundUrl=###}">省心宝（{$vb.borrow_name|cnsubstr=###,50}）</a></p>-->
+							<p class="bt"><a href="{$vb.id|getInvestUrl=###}" title="{$vb.borrow_name}">{$vb.borrow_name|cnsubstr=###,15}</a></p>
+                            <div class="bc">
+                            <div class="bc_bg" style="display: none;"></div>
+                            <span><b>{$vb.borrow_interest_rate}</b>%</span>
+                            </div>
+                            <div class="bf">
+                            <!--<p class="bf_p1">已加入：<span>{$vb.investornum}</span>人</p>-->
+							<p class="bf_p1">借款金额：<span>{$vb.borrow_money|getMoneyFormt=###}</span>元</p>
+                            <p class="bf_p2"><em>{$vb.borrow_duration}<if condition="$vb.repayment_type eq 1">天<else/>个月</if></em><em>&nbsp;{$vb.progress}%</em></p>
+                            </div>
+							<!--<if condition="$vb['transfer_out']-$vb['transfer_total'] eq 0">
+							<a href="#" class="btns">已满</a>
+							<elseif condition="$vb['online_time'] lt time()+300 and $vb['online_time'] gt time()" />
+							<a href="#" class="btns">更新中</a>
+							<elseif condition="$vb['online_time'] lt time()" />
+							<a href="{$vb.id|getFundUrl=###}" class="btna">我要加入</a>
+							</if>-->
+							<if condition="$vb.borrow_status eq 4">
+								<a href="#" class="btns">复审中</a>
+							<elseif condition="$vb.borrow_status eq 3"/>
+							   <a href="#" class="btns">已流标</a>
+							<elseif condition="$vb.borrow_status eq 6"/>
+								<a href="#" class="btna">还款中</a>
+							<elseif condition="$vb.borrow_status gt 6"/>
+								<a href="#" class="btns">已完成</a>
+							<else/>
+								<a href="{$vb.id|getInvestUrl=###}" class="btna">立即投标</span></a>
+							</if>
+                        </li>
+                        </volist>
+                            <li class="no-b" style=" cursor: pointer;">
+                            
+                            <h4>年化收益率最高</h4>
+                            <h5>12<span>%</span>-18<span>%</span></h5>
+                            <h6>3、6、12个月收益理财项目，每月获得利息收益，到期收回本金；<span>100元即可加入。</span></h6>
+                            </li>
+                    </ul>
+    			</div>
+    		</div>
+    	</div>
+    
+    </div>    
+</div>
+    <div class="container_12">
+      <!-- Loan List -->
+      <div class="loan mb fn-clear">
+        <div class="grid_12">
+          <div class="tit t4"><a class="mo" href="__ROOT__/index.php/Home/Invest/index.html" title="更多散标投资">更多&gt;&gt;</a><h2>散标投资<span>省时省心，安全灵活的理财计划！</span></h2></div>
+          <ul class="ui-list ui-list-m ui-list-invest" id="loan-list">
+
+<li class="ui-list-header fn-clear" id="loan-list-header">
+  <span class="ui-list-title fn-left color-gray-text w260">借款标题</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w120">年利率</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w160">金额</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w100">期限</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w110">进度</span>
+  <span class="ui-list-title fn-left color-gray-text text-center w80"></span>
+</li>
+
+<volist name="listBorrow.list" id="vb">
+<li class="ui-list-item fn-clear ">
+  <span class="ui-list-field fn-left text-big w260">
+    <!--<em class="ui-loantype XYRZ" title="信用认证标"></em>-->
+	<php>if($vb['ifdianzibiao']==1){echo '<em class="ui-loantype"><img src="__ROOT__/Style/H/images/images/index_dian.png" /></em>';}else{echo '<em class="ui-loantype"><img src="__ROOT__/Style/H/images/images/index_di.png" /></em>';}</php>
+	<a class="fn-left w210 rrd-dimgray fn-text-overflow" href="{$vb.id|getInvestUrl=###}" target="_blank" title="{$vb.borrow_name}">{$vb.borrow_name|cnsubstr=###,17}</a>
+  </span>
+  <span class="ui-list-field fn-left num text-right w90 pr30">预计<em class="value">{$vb.borrow_interest_rate}</em>%</span>
+  <span class="ui-list-field fn-left num text-right w130 pr30"><em class="value">{$vb.borrow_money|getMoneyFormt=###}</em>元</span>
+  <span class="ui-list-field fn-left num text-right w70 pr30"><em class="value">{$vb.borrow_duration}</em><if condition="$vb.repayment_type eq 1">天<else/>个月</if></span>
+  <span class="ui-list-field fn-left w110">
+	<strong class="yuan progressbar"> <em>{$vb.progress}</em>% </strong>
+  </span>
+  <span class="ui-list-field fn-left w80">
+	<if condition="$vb.borrow_status eq 4">
+		<a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-IN_PROGRESS" ><span class="IN_PROGRESS">复审中</span></a>
+	<elseif condition="$vb.borrow_status eq 3"/>
+       <a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-IN_PROGRESS" ><span class="IN_PROGRESS">已流标</span></a>
+	<elseif condition="$vb.borrow_status eq 6"/>
+		<a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-IN_PROGRESS"><span class="IN_PROGRESS">还款中</span></a>
+	<elseif condition="$vb.borrow_status gt 6"/>
+		<a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-IN_PROGRESS" href="{$vb.id|getInvestUrl=###}"><span class="READY FIRST_READY">已满标</span></a>
+	<else/>
+		<a class="ui-button ui-button-mid ui-button-blue ui-list-invest-button ui-list-invest-button-IN_PROGRESS" href="{$vb.id|getInvestUrl=###}"><span class="OPEN">投标</span></a>
+	</if>
+    
+  </span>
+</li>
+</volist>
+<li class="ui-list-more">
+  <a class="darkgray" href="__ROOT__/invest/index.html" target="_blank">查看更多投资理财项目</a>
+</li>
+</ul>
+        </div>
+      </div>
+    <div class="clearfix w1180">
+<div class="float-left fb-home-box fb-home-boxP15 fb-home-w820">
+<h4 class="fb-home-H4 clearfix"><span>公司动态</span><span><img src="__ROOT__/Style/H/images/images/1-140104201924.gif"></span><a href="__ROOT__/index.php/home/help?bdgg/index.html" target="_blank" title="更多公司动态">更多&gt;</a></h4>
+<div class="fb-home-mediaReport clearfix">
+<php>$xlist = getArticleList(array("type_id"=>22,"limit"=>'0,1')); foreach($xlist['list'] as $kx => $va){</php>
+<div class="fb-home-media">
+<a href="{$va.arturl}" class="float-left" target="_blank" title="{$va.title}"><img src="/{$va.art_img}" width="228px" height="142px" alt="{$va.title}"></a>
+</div>
+<div class="fb-home-mediaReportList">
+
+<h5><a href="{$va.arturl}" target="_blank" title="{$va.title}">{$va.title|cnsubstr=###,15}</a></h5>
+<p>{$va.art_info|cnsubstr=###,50}</p>
+<php>};$xlist=NULL;</php>
+<ul>
+<php>$xlist = getArticleList(array("type_id"=>22,"limit"=>'1,2')); foreach($xlist['list'] as $kx => $va){</php>
+<li><a href="{$va.arturl}" target="_blank" title="{$va.title}">{$va.title|cnsubstr=###,15}</a></li>
+<php>};$xlist=NULL;</php>
+</ul>
+</div></div> </div>
+<div class="float-right fb-home-box fb-home-boxP15 fb-home-w345">
+<h4 class="fb-home-H4 clearfix"><span>发标公告<i class="fb-home-new"></i></span><a href="__ROOT__/index.php/home/help?fbgg/index.html" target="_blank" title="更多公告">更多&gt;</a></h4>
+<ul class="fb-home-kxTrend">
+<php>foreach($noticeList['list'] as $kx => $vn){</php>
+<li>
+<a style="width:90%;display:inline-block;vertical-align:middle;" href="{$vn.arturl}" date='{$vn.art_time|mydate="Y-m-d",###}' target="_blank" title="{$vn.title}">{$vn.title|cnsubstr=###,20}</a>
+</li>
+<php>};$noticeList=NULL;</php>
+</ul>
+</div>
+</div>
+<div class="clearfix w1180">
+	<div class="float-left fb-home-box fb-home-boxP15 fb-home-w821">
+		<h4 class="fb-home-H4 clearfix"><span>新闻中心</span><a href="__ROOT__/index.php/home/help?news" target="_blank" title="更多新闻">更多&gt;</a></h4>
+		<div class="fb-home-mediaReport1 clearfix">
+			<ul>
+					<php>
+                    $jishu = 1;
+                    $xlist = getArticleList(array("type_id"=>2,"limit"=>20)); foreach($xlist['list'] as $kx => $va){
+                    if($va.art_img != "" && $jishu <= 4){</php>	
+						<li>
+						    <a href="{$va.arturl}" title="{$va.title}" target="_blank"><div class="pot"><img src="/{$va.art_img}" width="208" height="126" alt="{$va.title}"></div>
+							<p><font style="font-size:5px;">●</font> {$va.title|cnsubstr=###,13}</p></a>
+						</li>
+					<php>}
+                    else{</php>
+                    	<li style="margin-top:6px;">
+							<p><font style="font-size:5px;">●</font> <a href="{$va.arturl}" title="{$va.title}" target="_blank">{$va.title|cnsubstr=###,13}</a></p>
+						</li>
+                    <php>}
+                    $jishu++;
+                    };
+                    $xlist=NULL;</php>
+            		
+            </ul>
+		</div> 
+	</div>
+</div>
+<div class="hzhb">
+    	<div class="tit t4"><h2>友情链接</h2></div>
+        <div class="d_dbpic" style="margin-left:10px;">
+		<volist name=":get_home_friend(1)" id="vf">
+        	<span style="margin:5px; float:left;"><a href="{$vf.link_href}" target="_blank">{$vf.link_txt}</a></span>
+        </volist>
+			<div class="clear"></div>
+        </div>
+</div>
+    </div>
+<script>
+$(function() {
+    $('.progressbar').each(function(index, el) {
+        var num = $(this).find('em').text();
+        $(this).addClass('progressbar-' + num);
+    });
+});
+</script>
+<include file="Public:_footer1" />

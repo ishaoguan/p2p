@@ -1,0 +1,64 @@
+<body>
+<div class="header">
+	<div class="header_1000">
+    	<div class="header_left">
+			{:get_ad(3)}
+			<div class="pull-left">
+				<em class="ico-weibo" onMouseMove="document.getElementById('tips').style.display='block';" onMouseOut="document.getElementById('tips').style.display='none'" ><div class="tips" id="tips" idstyle="display: none;">请关注我们的微博！</div></em>
+				<em class="ico-weixin"  onmousemove="document.getElementById('tips2').style.display='block';" onMouseOut="document.getElementById('tips2').style.display='none'" ><div class="tips" id="tips2" style="display: none;">{:get_ad(11)}</div></em>
+			</div>
+			
+		</div>
+        <div class="header_right">
+    		<ul>
+			<?php $dws= session('u_user_name'); ?>
+			<if condition="$UID gt '0'">
+				<li><a href="{:U('Member/Index/index/')}">您好，{$dws|cnsubstr=###,10}，进入会员中心</a>&nbsp;|</li>
+				<li><a href="{:U('Member/Common/actlogout/')}">退出</a>&nbsp;</li>
+			<else/>
+				<li><a href="{:U('Member/Common/register/')}">注册</a>&nbsp;|</li>
+				<li><a href="{:U('Member/Common/login/')}">登录</a>&nbsp;</li>
+			</if>
+            <div class="clear"></div>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="under">
+	<div class="under_1000">
+        <div class="logo_left"><a href="__APP__/home/index.html">{:get_ad(1)}</a></div>
+        <div class="content_nav">
+			<php>$typelist = getTypeList(array('type_id'=>0,'limit'=>9)); foreach($typelist as $vtype=> $va){ </php>
+            <a id="{$va.type_nid}" href="__ROOT__{$va.turl}" class="">{$va.type_name}</a>
+            <php>}</php>
+        </div>
+        <div class="clear"></div>
+	</div>
+<script>
+	var url = window.location.href;
+	//alert( url);
+	if(url.indexOf('invest')!=-1){
+		$("#invests").attr("class","thisclass");
+	}else if(url.indexOf('debt')!=-1){ 
+		$("#invests").attr("class","thisclass");	
+	}else if(url.indexOf('fund')!=-1){ 
+		$("#invests").attr("class","thisclass");	
+	}else if(url.indexOf('safe')!=-1){
+		$("#bangzhu").attr("class","thisclass");
+	}else if(url.indexOf('new')!=-1){
+		$("#zhiyin").attr("class","thisclass");
+	}else if(url.indexOf('aboutus')!=-1){
+		$("#about").attr("class","thisclass");
+	}else if(url.indexOf('member')!=-1){
+		$("#members").attr("class","thisclass");
+	}else if(url.indexOf('borrow')!=-1){
+		$("#borrows").attr("class","thisclass");
+	}else{
+		$("#indexs").attr("class","thisclass");
+	}
+	
+</script>
+
+</div>

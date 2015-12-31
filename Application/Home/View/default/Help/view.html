@@ -1,0 +1,55 @@
+<include file="Public:_header_common_help_view" />
+
+<include file="Public:_header_main1" />
+<!--中部开始-->
+<div class="cms_page"> <!--{:get_ad(5)}-->
+  <!--<div class="cms_frame cf">-->
+    <div class="cms_content" style="width:880px;">
+      <div class="cms-title-1">
+        <h2>{$wo.type_name}</h2>
+      </div>
+      <div style="font-size:12px; width:100%; padding:3px;">您当前的位置是： <a href="http://www.ronghaihang.cn/">融海行</a> &gt;&gt; 
+      <switch name="wo.type_name">
+       <case value="行业新闻"><a href="http://www.ronghaihang.cn/news/index.html">{$wo.type_name}</a></case>
+       <case value="网站公告"><a href="http://www.ronghaihang.cn/gonggao/index.html">{$wo.type_name}</a></case>
+       <case value="公司动态"><a href="http://www.ronghaihang.cn/bdgg/index.html">{$wo.type_name}</a></case>
+       <case value="发标公告"><a href="http://www.ronghaihang.cn/fbgg/index.html">{$wo.type_name}</a></case>
+      </switch>
+      </div>
+      <div class="cms-details">
+        <div class="article-list-wrap mgt">
+          <table width="720" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;">
+            <tr>
+              <td height="35" align="center" valign="middle" style="font-size:16px; font-weight:bolder"><h1>{$vo.title}</h1></td>
+            </tr>
+            <tr>
+              <td height="30" align="center" valign="middle">发布时间：{$vo.art_time|date="Y-m-d H:i",###}</td>
+            </tr>
+            <tr>
+              <td>{$vo.art_content}</td>
+            </tr>
+            <tr>
+            	<td align="right">
+                <table width="100%"><tr><td width="70%" align="right">分享到：</td><td>
+                	<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+				</td></tr></table>
+                </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+  <!--</div>-->
+</div>
+<include file="Public:_footer1" />
